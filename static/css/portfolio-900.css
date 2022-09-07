@@ -1,0 +1,325 @@
+/* Desktop */
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    /* background-color: rgb(180, 161, 161); */
+}
+
+header img {
+    width: 70px;
+}
+
+.fa-bars:before,
+.fa-xmark:before {
+    font-size: 70px;
+    margin-right: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#main-navbar {
+    height: 100vh;
+    font-size: 35px;
+}
+
+
+.main-nav-categories {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 5px;
+    margin-top: 25%;
+    width: 3%;
+    position: fixed;
+}
+
+.main-nav-categories-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-categories-ul li {
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-nav-categories-ul li a {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    color: rgba(219, 52, 52);
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-decoration: underline 0.15em rgb(10, 10, 10);
+    text-underline-offset: 0.4em;
+    transition: text-decoration-color 1s, text-underline-offset 2ms;
+    -webkit-transition: text-decoration-color 1s, text-underline-offset 2ms;
+    -moz-transition: text-decoration-color 1s, text-underline-offset 2ms;
+    -ms-transition: text-decoration-color 1s, text-underline-offset 2ms;
+    -o-transition: text-decoration-color 1s, text-underline-offset 2ms;
+}
+
+.main-nav-categories-ul li a.current {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline 0.15em rgb(221, 0, 0);
+    text-underline-offset: 0.4em;
+    color: rgb(221, 0, 0);
+    width: 25px;
+    height: 25px;
+    border-radius: 99px;
+    -webkit-border-radius: 99px;
+    -moz-border-radius: 99px;
+    -ms-border-radius: 99px;
+    -o-border-radius: 99px;
+}
+
+
+#main-section-1,
+#main-section-2,
+#main-section-3,
+#main-section-4,
+#main-section-5 {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+    padding-bottom: 25%;
+    margin-left: 5%;
+    width: 88%;
+}
+
+
+#main-section-4 {
+    padding-bottom: 15%;
+}
+
+
+
+
+/* ********************************* SECTION_1 ****************************************************** */
+
+#main-section-1 {
+    padding-top: 15%;
+    height: 70vh;
+    padding-bottom: 15%;
+}
+
+#main-section-1 h1 {
+    font-size: 30px;
+}
+
+#main-section-1 h2 {
+    margin-top: 2%;
+    font-size: 55px;
+}
+
+#main-section-1 h3 {
+    font-size: 35px;
+}
+
+#main-section-1 p {
+    margin-top: 6%;
+    font-size: 22px;
+}
+
+#main-section-1 img.aos-init.aos-animate {
+    width: 50%;
+}
+
+
+section h4 {
+    font-size: 30px;
+}
+
+.section-header {
+    font-size: 30px;
+}
+
+
+
+/* ********************************* SECTION_2 ****************************************************** */
+
+#main-section-2 .section-2-div-about-me.aos-init.aos-animate {
+    display: flex;
+    flex-direction: row;
+}
+
+#main-section-2 img.aos-init.aos-animate {
+    width: 60%;
+}
+
+#main-section-2 .section-2-div-tech h5 {
+    font-size: 26px;
+    margin-top: 5%;
+}
+
+#main-section-2 .section-2-div-tech-list div {
+    display: none;
+    /* width: 31%; */
+}
+
+#main-section-2 .section-2-div-tech-list {
+    display: none;
+    justify-content: space-evenly;
+}
+
+
+
+
+/* ********************************* SECTION_3 ****************************************************** */
+#main-section-3 .section-3-div-expe h5 {
+    margin-top: 0;
+    margin-bottom: 4%;
+    font-size: 28px;
+}
+
+#main-section-3 .section-3-div-expe h5 a {
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+#main-section-3 .section-3-div-expe-compet p {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div p {
+    font-size: 19px;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div ul {
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div li {
+    font-size: 15px;
+}
+
+
+
+
+
+
+/* ********************************* SECTION_4 ******************************************************  */
+#main-section-4 .section-4-div-projects .section-4-div-projects-box div a {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box p {
+    font-size: 17px;
+}
+
+#main-section-4 .section-4-div-projects ul {
+    margin-top: 5%;
+}
+
+#main-section-4 .section-4-div-projects ul li {
+    font-size: 15px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box i:before {
+    font-size: 30px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box {
+    width: 93%;
+    margin-bottom: 16%;
+    position: relative;
+}
+
+#main-section-4 .section-4-div-projects-box-img {
+    /* position: absolute; */
+    z-index: 1;
+    width: 60%;
+}
+
+#main-section-4 .section-4-div-projects-box:nth-child(2) .section-4-div-projects-box-img {
+    width: 60%;
+    margin-left: 32%;
+}
+
+#main-section-4 .section-4-div-projects-box-img img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%) blur(2.5px);
+    -webkit-filter: grayscale(100%) blur(2.5px);
+    transition: 1s -webkit-filter linear;
+    -webkit-transition: 1s -webkit-filter linear;
+    -o-transition: 1s -webkit-filter linear;
+    -moz-transition: 1s -webkit-filter linear;
+    -ms-transition: 1s -webkit-filter linear;
+}
+
+#main-section-4 .section-4-div-projects-box-img img:hover {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0%) blur(0px);
+    -webkit-filter: grayscale(0%) blur(0px);
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box-descr {
+    position: absolute;
+    margin-bottom: 0;
+    z-index: 2;
+    width: 50%;
+}
+
+#main-section-5 .main-section-5-div-contact {
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    font-size: 18px;
+    margin: 0;
+}
+
+form {
+    margin: 10px;
+    width: 60%;
+}
+
+form input {
+    font-size: 20px;
+    height: 15px;
+    margin-bottom: 30px;
+}
+
+form textarea {
+    width: 72%;
+    height: 160px;
+    font-size: 20px;
+}
+
+form input#submit {
+    height: 60px;
+    margin-top: 13px;
+    font-size: 22px;
+    cursor: pointer;
+}

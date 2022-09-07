@@ -1,0 +1,390 @@
+{
+    "Icons": [
+        {
+            "site": "Font Awesome",
+            "url": "https://fontawesome.com/",
+            "description": "Icônes pour site",
+            "img1": "../static/img/tools/fontAwesome.png"
+        },
+        {
+            "site": "Icons 8",
+            "url": "https://icones8.fr/",
+            "description": "Icônes / illustrations pour site",
+            "img1": "../static/img/tools/icones8.png"
+        },
+        {
+            "site": "Flaticon",
+            "url": "https://www.flaticon.com/",
+            "description": "Icônes / stickers pour site",
+            "img1": "../static/img/tools/flaticon.png"
+        }
+    ],
+    "IDE": [
+        {
+            "site": "CodePen",
+            "url": "https://codepen.io/",
+            "description": "IDE Online",
+            "img1": "../static/img/tools/codepen.png"
+        },
+        {
+            "site": "Collabotary",
+            "url": "https://colab.research.google.com/",
+            "description": "IDE Python Online",
+            "img1": "../static/img/tools/collaboratory.png"
+        }
+    ],
+    "Fonts": [
+        {
+            "site": "Fonts Squirrel",
+            "url": "https://www.fontsquirrel.com/",
+            "description": "Fonts - Police caractères",
+            "img1": "../static/img/tools/fontSquirrel.png"
+        },
+        {
+            "site": "1001 Fonts",
+            "url": "https://www.1001fonts.com/",
+            "description": "Fonts - Police caractères",
+            "img1": "../static/img/tools/1001Fonts.png"
+        }
+    ],
+    "Logo": [
+        {
+            "site": "Looka",
+            "url": "https://looka.com/",
+            "description": "Création de Logo",
+            "img1": "../static/img/tools/looka.png"
+        }
+    ],
+    "CSS": [
+        {
+            "site": "Grid Cheat Sheet",
+            "url": "https://alialaa.github.io/css-grid-cheat-sheet/",
+            "description": "Guide visuel de grille CSS",
+            "img1": "../static/img/tools/cssGridCheatSheets.png"
+        },
+        {
+            "site": "Autoprefixer CSS",
+            "url": "https://autoprefixer.github.io/",
+            "description": "Ajoute des préfixe a ton CSS pour les différents navigateurs",
+            "img1": "../static/img/tools/autoprefixer.png"
+        },
+        {
+            "site": "CSS Accordion Slider Generator",
+            "url": "https://accordionslider.com/",
+            "description": "Créez des curseurs d'accordéon Responsive",
+            "img1": "../static/img/tools/cssAccordionSlider.png"
+        },
+        {
+            "site": "CSS Loaders",
+            "url": "https://cssloaders.github.io/",
+            "description": "CSS Loaders",
+            "img1": "../static/img/tools/cssLoader.png"
+        },
+        {
+            "site": "KeyFrames",
+            "url": "https://keyframes.app/",
+            "description": "CSS Animations - Colors - Shadows - Caractère Code",
+            "img1": "../static/img/tools/keyFrames.png"
+        },
+        {
+            "site": "UI Buttons",
+            "url": "https://ui-buttons.web.app/",
+            "description": "Buttons HTML-CSS",
+            "img1": "../static/img/tools/UIButtons.png"
+        }
+    ],
+    "Image": [
+        {
+            "site": "Unsplash",
+            "url": "https://unsplash.com/",
+            "description": "Source d'images librement utilisables",
+            "img1": "../static/img/tools/unsplash.png"
+        }
+    ],
+    "Colors": [
+        {
+            "site": "Coolors",
+            "url": "https://coolors.co/",
+            "description": "Color palette Geneartor",
+            "img1": "../static/img/tools/coolors.png"
+        },
+        {
+            "site": "CSS Gradient",
+            "url": "https://cssgradient.io/",
+            "description": "Gradient CSS",
+            "img1": "../static/img/tools/cssGradiant.png"
+        }
+    ],
+    "Multi": [
+        {
+            "site": "10015",
+            "url": "https://10015.io/",
+            "description": "Tools Text - Image - CSS - Coding - Colrs - Social Media - Miscellaneous",
+            "img1": "../static/img/tools/10015.png"
+        },
+        {
+            "site": "DevTooly",
+            "url": "https://devtooly.com/",
+            "description": "Frontend Developer tools",
+            "img1": "../static/img/tools/devTooly.png"
+        },
+        {
+            "site": "OverAPI Developer-Tools",
+            "url": "https://overapi.com/developer-tools",
+            "description": "CSS - JS - Design",
+            "img1": "../static/img/tools/overAPI.png"
+        }
+    ],
+    "JS": [
+        {
+            "site": "ChartJS",
+            "url": "https://www.chartjs.org/",
+            "description": "JS Graphiques",
+            "img1": "../static/img/tools/chartsJS.png"
+        },
+        {
+            "site": "ThreeJS",
+            "url": "https://threejs.org/",
+            "description": "JS 3D Librairie",
+            "img1": "../static/img/tools/threeJS.png"
+        },
+        {
+            "site": "Slick",
+            "url": "https://kenwheeler.github.io/slick/",
+            "description": "JS Caroussel",
+            "img1": "../static/img/tools/slick.png"
+        },
+        {
+            "site": "Cleave.JS",
+            "url": "https://nosir.github.io/cleave.js/",
+            "description": "Formatez votre contenu <input/>",
+            "img1": "../static/img/tools/cleaveJS.png"
+        },
+        {
+            "site": "AOS",
+            "url": "https://michalsnik.github.io/aos/",
+            "description": "Animate On Scroll Library",
+            "img1": "../static/img/tools/aos.png"
+        }
+    ],
+    "API": [
+        {
+            "site": "ReqBin",
+            "url": "https://reqbin.com/",
+            "description": "Online REST / SOAP API testing - JS - Python - PHP - JSON - XML - Curl",
+            "img1": "../static/img/tools/reqbin.png"
+        }
+    ],
+    "GitHub": [
+        {
+            "site": "Readme",
+            "url": "https://readme.so/",
+            "description": "Créer un .Readme pour GitHub",
+            "img1": "../static/img/tools/readme.png"
+        }
+    ],
+    "CheatSheets": [
+        {
+            "site": "overapi",
+            "url": "https://overapi.com/",
+            "description": "Cheats Sheets All Languages",
+            "img1": "../static/img/tools/overAPI.png"
+        },
+        {
+            "site": "Grid Cheat Sheet",
+            "url": "https://alialaa.github.io/css-grid-cheat-sheet/",
+            "description": "Guide visuel de grille CSS",
+            "img1": "../static/img/tools/cssGridCheatSheets.png"
+        }
+    ],
+    "Social_Media": [
+        {
+            "site": "Chirr App",
+            "url": "https://getchirrapp.com/",
+            "description": "Ecrire des Threads Twitter",
+            "img1": "../static/img/tools/chirrApp.png"
+        },
+        {
+            "site": "Carbon",
+            "url": "https://carbon.now.sh/",
+            "description": "Partager des images de votre code source",
+            "img1": "../static/img/tools/carbon.png"
+        }
+    ],
+    "All": [
+        {
+            "site": "Font Awesome",
+            "url": "https://fontawesome.com/",
+            "description": "Icônes pour site",
+            "img1": "../static/img/tools/fontAwesome.png"
+        },
+        {
+            "site": "Icons 8",
+            "url": "https://icones8.fr/",
+            "description": "Icônes / illustrations pour site",
+            "img1": "../static/img/tools/icones8.png"
+        },
+        {
+            "site": "Flaticon",
+            "url": "https://www.flaticon.com/",
+            "description": "Icônes / stickers pour site",
+            "img1": "../static/img/tools/flaticon.png"
+        },
+        {
+            "site": "CodePen",
+            "url": "https://codepen.io/",
+            "description": "IDE Online",
+            "img1": "../static/img/tools/codepen.png"
+        },
+        {
+            "site": "Collabotary",
+            "url": "https://colab.research.google.com/",
+            "description": "IDE Python Online",
+            "img1": "../static/img/tools/collaboratory.png"
+        },
+        {
+            "site": "Fonts Squirrel",
+            "url": "https://www.fontsquirrel.com/",
+            "description": "Fonts - Police caractères",
+            "img1": "../static/img/tools/fontSquirrel.png"
+        },
+        {
+            "site": "1001 Fonts",
+            "url": "https://www.1001fonts.com/",
+            "description": "Fonts - Police caractères",
+            "img1": "../static/img/tools/1001Fonts.png"
+        },
+        {
+            "site": "Looka",
+            "url": "https://looka.com/",
+            "description": "Création de Logo",
+            "img1": "../static/img/tools/looka.png"
+        },
+        {
+            "site": "Grid Cheat Sheet",
+            "url": "https://alialaa.github.io/css-grid-cheat-sheet/",
+            "description": "Guide visuel de grille CSS",
+            "img1": "../static/img/tools/cssGridCheatSheets.png"
+        },
+        {
+            "site": "AOS",
+            "url": "https://michalsnik.github.io/aos/",
+            "description": "Animate On Scroll Library",
+            "img1": "../static/img/tools/aos.png"
+        },
+        {
+            "site": "Autoprefixer CSS",
+            "url": "https://autoprefixer.github.io/",
+            "description": "Ajoute des préfixe a ton CSS pour les différents navigateurs",
+            "img1": "../static/img/tools/autoprefixer.png"
+        },
+        {
+            "site": "CSS Accordion Slider Generator",
+            "url": "https://accordionslider.com/",
+            "description": "Créez des curseurs d'accordéon Responsive",
+            "img1": "../static/img/tools/cssAccordionSlider.png"
+        },
+        {
+            "site": "CSS Loaders",
+            "url": "https://cssloaders.github.io/",
+            "description": "CSS Loaders",
+            "img1": "../static/img/tools/cssLoader.png"
+        },
+        {
+            "site": "KeyFrames",
+            "url": "https://keyframes.app/",
+            "description": "CSS Animations - Colors - Shadows - Caractère Code",
+            "img1": "../static/img/tools/keyFrames.png"
+        },
+        {
+            "site": "Unsplash",
+            "url": "https://unsplash.com/",
+            "description": "Source d'images librement utilisables",
+            "img1": "../static/img/tools/unsplash.png"
+        },
+        {
+            "site": "Coolors",
+            "url": "https://coolors.co/",
+            "description": "Color palette Geneartor",
+            "img1": "../static/img/tools/coolors.png"
+        },
+        {
+            "site": "CSS Gradient",
+            "url": "https://cssgradient.io/",
+            "description": "Gradient CSS",
+            "img1": "../static/img/tools/cssGradiant.png"
+        },
+        {
+            "site": "10015",
+            "url": "https://10015.io/",
+            "description": "Tools Text - Image - CSS - Coding - Colrs - Social Media - Miscellaneous",
+            "img1": "../static/img/tools/10015.png"
+        },
+        {
+            "site": "DevTooly",
+            "url": "https://devtooly.com/",
+            "description": "Frontend Developer tools",
+            "img1": "../static/img/tools/devTooly.png"
+        },
+        {
+            "site": "OverAPI Developer-Tools",
+            "url": "https://overapi.com/developer-tools",
+            "description": "CSS - JS - Design",
+            "img1": "../static/img/tools/overAPI.png"
+        },
+        {
+            "site": "ChartJS",
+            "url": "https://www.chartjs.org/",
+            "description": "JS Graphiques",
+            "img1": "../static/img/tools/chartsJS.png"
+        },
+        {
+            "site": "ThreeJS",
+            "url": "https://threejs.org/",
+            "description": "JS 3D Librairie",
+            "img1": "../static/img/tools/threeJS.png"
+        },
+        {
+            "site": "Slick",
+            "url": "https://kenwheeler.github.io/slick/",
+            "description": "JS Caroussel",
+            "img1": "../static/img/tools/slick.png"
+        },
+        {
+            "site": "Cleave.JS",
+            "url": "https://nosir.github.io/cleave.js/",
+            "description": "Formatez votre contenu <input/>",
+            "img1": "../static/img/tools/cleaveJS.png"
+        },
+        {
+            "site": "ReqBin",
+            "url": "https://reqbin.com/",
+            "description": "Online REST / SOAP API testing - JS - Python - PHP - JSON - XML - Curl",
+            "img1": "../static/img/tools/reqbin.png"
+        },
+        {
+            "site": "Readme",
+            "url": "https://readme.so/",
+            "description": "Créer un .Readme pour GitHub",
+            "img1": "../static/img/tools/readme.png"
+        },
+        {
+            "site": "Chirr App",
+            "url": "https://getchirrapp.com/",
+            "description": "Ecrire des Threads Twitter",
+            "img1": "../static/img/tools/chirrApp.png"
+        },
+        {
+            "site": "Carbon",
+            "url": "https://carbon.now.sh/",
+            "description": "Partager des images de votre code source",
+            "img1": "../static/img/tools/carbon.png"
+        },
+        {
+            "site": "UI Buttons",
+            "url": "https://ui-buttons.web.app/",
+            "description": "Buttons HTML-CSS",
+            "img1": "../static/img/tools/UIButtons.png"
+        }
+    ]
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">-->
+    <link rel="stylesheet" href="../static/css/portfolio.css">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="../static/css/portfolio-600.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../static/css/portfolio-900.css">
+    <link rel="stylesheet" media="screen and (min-width: 1250px)" href="../static/css/portfolio-1250.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://kit.fontawesome.com/117361f2ed.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <title>Portfolio Thomas.C</title>
+</head>
+<body>
+    <!--<div id="loading">
+        <div class="loading-image">
+            <img src="{{ url_for('static', filename='img/logo_.png') }}">
+            <img src="../static/img/logo_.png">
+        </div>
+        <span class="loader"></span>
+    </div>-->
+    <div id="main">
+        <header class="main-header" data-aos="fade-down" data-aos-delay="1000">
+            <!--<img src="{{ url_for('static', filename='img/logo_.png') }}">-->
+            <img src="../static/img/logo_.png">
+            <div class="main-header-social">
+                <a href="https://github.com/Kyytox"><i class="fa-brands fa-github" alt="GitHub"></i></a>
+                <a href="#main-section-5"><i class="fa-solid fa-envelope" alt="E-mail"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin" alt="Linkedin"></i></a>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openNavbar()" ></i>
+        </header>
+        <div id="main-navbar">
+            <i id="xmark" class="fa-solid fa-xmark" onclick="closeNavbar()" style="visibility: hidden"></i>
+            <ul>
+                <li><p>01.</p><a href="#main-section-2" onclick="closeNavbar()">Qui suis-je</a></li>
+                <li><p>02.</p><a href="#main-section-3" onclick="closeNavbar()">Experience</a></li>
+                <li><p>03.</p><a href="#main-section-4" onclick="closeNavbar()">Projets</a></li>
+                <li><p>04.</p><a href="#main-section-5" onclick="closeNavbar()">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <nav class="main-nav-categories" data-aos="fade-right" data-aos-delay="2200">
+            <ul class='main-nav-categories-ul'>
+              <li><a href="#main-section-2">01</a></li>
+              <li><a href="#main-section-3">02</a></li>
+              <li><a href="#main-section-4">03</a></li>
+              <li><a href="#main-section-5">04</a></li>
+            </ul>
+        </nav>
+
+        <section id="main-section-1">
+            <h1 data-aos="fade-down-right" data-aos-delay="1000">Bonjour, je suis</h1>
+            <h2 data-aos="fade-down-right" data-aos-delay="1500">Thomas.C</h2>
+            <h3 data-aos="fade-right" data-aos-delay="2000">Développeur de choses et d'autres</h3>
+            <p data-aos="fade-up" data-aos-delay="2500">
+                Voici une présentation de mes différentes expériences et side projects dans le monde du développement.  
+            </p>
+            <div>
+                <button class="btn-70" data-aos="zoom-in" data-aos-delay="3000" data-aos-duration="2500">CV</button>
+            </div>
+        </section>
+
+
+
+
+        <section id="main-section-2">
+            <div data-aos="flip-left" class="section-header">
+                <span>01.</span><h4>Qui suis-je ?</h4><hr></hr>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="section-2-div-about-me">
+                <p>
+                    Suite a l'obtention de mon BTS SIO (Services informatiques aux organisations, spécialité développement), j'ai pus obtenir un poste de développeur logiciel, que j'occupe depuis maintenant 3 ans et demi,
+                    dans une société de conseil et de services IT, d'intégrateur Salesforce et d'éditeur de logiciels pour la logistique.
+                    <br>
+                    Dans cette société nous utilisons presque uniquement que des outils et languages privées, ce qui m'a poussé a me lancer de nouveaux défis et de découvrir d'autres technologie.   
+                    <br><br>
+                    C'est pour cela que depuis début 2022, en autodidacte, je me forme aux différents outils, frameworks et languages du domaine du Web ,mais pas que.
+                </p>
+                <img src="../static/img/Code_img.png" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="3000">
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="section-2-div-tech">
+                <h5>Voici les technologies avec lesquelles j'ai travaillé récemment :</h5>
+                <div class="box">
+                    <span style="--i:1">
+                        <i class="fa-brands fa-python"></i><p>Python</p>
+                    </span>
+                    <span style="--i:2">
+                        <i class="fa-brands fa-square-js"></i><p>JavaScript</p>
+                    </span>
+                    <span style="--i:3">
+                        <i class="fa-brands fa-node-js"></i><p>Node JS</p>
+                    </span>
+                    <span style="--i:4">
+                        <i class="fa-brands fa-react"></i><p>React JS</p>
+                    </span>
+                    <span style="--i:5">
+                        <iconify-icon icon="simple-icons:django"></iconify-icon><p>Django</p>
+                    </span>
+                    <span style="--i:6">
+                        <iconify-icon icon="file-icons:flask"></iconify-icon><p>Flask</p>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="main-section-3">
+            <div data-aos="flip-left" class="section-header" style="flex-direction: row-reverse">
+                <span>.02</span><h4>Experience</h4><hr></hr>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="section-3-div-expe">
+                <h5><a href="https://www.hardis-group.com/">Hardis Group</a>
+                    <br>
+                    02/2019 - Présent
+                    <br>
+                    Concepteur Développeur Logiciel
+                </h5>
+                <div data-aos="fade-up" data-aos-delay="400" class="section-3-div-expe-compet">
+                    <p>Durant les quelques années passés dans cette société j'ai pus acquérir plusiquers compétences.
+                        <br>
+                        J'ai a charge plusieurs clients pour lesquels je gère leur périmètre technique.
+                    </p>
+                    <div class="section-3-div-expe-compet-list">
+                        <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">
+                            <p>Gestion technique de comptes clients</p>
+                        </div>                        
+                        <div data-aos="fade-left" data-aos-delay="500" data-aos-duration="1500">
+                            <p>Analyse et résolution de problèmes logiciel</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+                            <p>Gestion de petites et moyennes évolutions</p>
+                            <ul>
+                                <li>Qualification, analyse techniques</li>
+                                <li>Réalisation du développement et des tests</li>
+                                <li>Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="main-section-4">
+            <div data-aos="flip-left" class="section-header">
+                <span>03.</span><h4>Portfolio</h4><hr></hr>
+            </div>
+            <div class="section-4-div-projects">
+                <div class="section-4-div-projects-box">
+                    <div class="section-4-div-projects-box-img" data-aos="fade-down-right" data-aos-delay="500">
+                        <a href="http://www.coincentraliz.fr/" target="_blank" rel="noopener noreferrer">
+                            <img src="../static/img/coinCentraliz.png">
+                        </a>
+                    </div>
+                    <div class="section-4-div-projects-box-descr" data-aos="fade-down-left" data-aos-delay="500">
+                        <a href="http://www.coincentraliz.fr/" target="_blank" rel="noopener noreferrer">Coin Centraliz</a>
+                        <div class="section-4-div-projects-box-descr-social">
+                            <a href="https://github.com/Kyytox/Coin_Centraliz" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <p>Coin Centraliz est un agrégateur de contenu liées au domaine de la cryptomonnaie.
+                            Plusieurs type de contenu sont disponible :
+                            <br>
+                            <br>Articles de journaux numérique 
+                            <br>Vidéos et podcasts 
+                            <br>Chaines Twitch en live 
+                            <br>Thread Twitter 
+                        </p>
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>Postgre SQL</li>
+                            <li>API</li>
+                            <li>Bot_Tweeter</li>
+                            <li>Scrapping</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section-4-div-projects-box">
+                    <div class="section-4-div-projects-box-img" data-aos="fade-down-right" data-aos-delay="500">
+                        <a href="http://www.coincentraliz.fr/" target="_blank" rel="noopener noreferrer">
+                            <img src="../static/img/bitcoinQuiz.png">
+                        </a>
+                    </div>
+                    <div class="section-4-div-projects-box-descr" data-aos="fade-down-left" data-aos-delay="500">
+                        <a href="https://bitcoinquiz.fr/" target="_blank" rel="noopener noreferrer">Bitcoin Quiz</a>
+                        <div>
+                            <a href="https://github.com/Kyytox/bitcoin_quizz" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <p>Gagnez des Satoshis avec Bitcoin Quiz. Découvrez ou testez vos connaissances sur le Bitcoin et son écosystème
+                            <br>
+                            <br> 10 Questions par partie
+                            <br> 2 satoshis par bonne réponse
+                            <br> 100 satoshis par jour
+                            <br> Langues : FR - EN
+                        </p>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>Node JS</li>
+                            <li>React JS</li>
+                            <li>API</li>
+                            <li>Lightning Network</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section-4-div-projects-box">
+                    <div class="section-4-div-projects-box-img" data-aos="fade-down-right" data-aos-delay="500">
+                        <a href="http://www.vinylsdubscrap.xyz/" target="_blank" rel="noopener noreferrer">
+                            <img src="../static/img/vinylsDubScrap.png">
+                        </a>
+                    </div>
+                    <div class="section-4-div-projects-box-descr" data-aos="fade-down-left" data-aos-delay="500">
+                        <a href="http://www.vinylsdubscrap.xyz/" target="_blank" rel="noopener noreferrer">Vinyls Dub Scrap</a>
+                        <div>
+                            <a href="https://github.com/Kyytox/vinyls_dub_scrap" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <p>Ecouter les nouveaux extraits de vinyls des différents shops Reggae Dub.
+                            <br><br>
+                            Tous les 3 jours des nouveaux vinyls sont ajoutés.
+                            <br><br>
+                            Vous pouvez écouter ces extraits via un lectuer intégré.
+                            <br><br> 
+                            Un compte utilisateur peut etre créé pour ajouter certains vinyls à ses favoris.
+                        </p>
+                        <ul>
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>Scrapping</li>
+                            <li>Login/Sign</li>
+                        </ul>
+                    <div>
+                </div>
+            </div>
+        </section>
+
+        <section id="main-section-5">
+            <div data-aos="flip-left" class="section-header" style="flex-direction: row-reverse">
+                <span>.04</span><h4>Contact</h4><hr></hr>
+            </div>
+            <div class="main-section-5-div-contact">
+                {% if msg != '' %}
+                    <span id="main-section-5-div-contact-msg"> {{ msg }} </span>
+                {% endif %}
+                <form id="contact-form" action="{{ url_for('portfolio') }}" method=post data-aos="zoom-out-right" data-aos-delay="500">
+                    {{ form.csrf_token }}
+
+                    {{ form.name.label }}
+                    {{ form.name }}
+                
+                    {{ form.email.label }}
+                    {{ form.email }}
+                
+                    {{ form.subject.label }}
+                    {{ form.subject }}
+                
+                    {{ form.message.label }}
+                    {{ form.message }}
+                
+                    {{ form.submit }}
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <script>
+        AOS.init({          
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1300, // values from 0 to 3000, with step 50ms
+          });
+    </script>
+</body>
+</html>
+
+
+<script>
+
+    if (document.getElementById("main-section-5-div-contact-msg")) {
+        window.location.hash = "main-section-5";
+    }
+    //setTimeout(() => {
+      //  console.log("this is the first message")
+        
+        //$("#loading").delay(1000).fadeOut("slow");
+        //console.log(document.getElementById("loading"))
+        //document.getElementById("loading").classList.add('hidden')
+        //$("#main").delay(1).fadeIn("slow");
+        //document.getElementById("main").classList.add('active')
+
+    //    }, 5000);
+
+    //$(window).load(function() {
+        //$("#loading").delay(1000).fadeOut("slow");
+        //$("#main").delay(1).fadeIn("slow");
+    //})
+
+    function openNavbar(){
+        document.getElementById("main-navbar").classList.add('is-visible')
+        document.getElementById("xmark").style.visibility = "visible";
+    }
+
+    function closeNavbar(){
+        document.getElementById("xmark").style.visibility = "hidden";
+        document.getElementById("main-navbar").classList.remove('is-visible')
+    }
+
+
+    // add class "curent" on li in the left menu when you scroll on section 
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainDOM = document.getElementById("main");
+    var mainSections = mainDOM.querySelectorAll('section');
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY*1.2;
+        console.log(fromTop)
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+            section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop
+            ) {
+            link.classList.add("current");
+            } else {
+            link.classList.remove("current");
+            }
+        });
+    });
+ </script>

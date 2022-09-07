@@ -1,0 +1,210 @@
+/* Tablette and phone */
+
+
+body {
+    /* background-color: rgb(180, 161, 161); */
+}
+
+header img {
+    width: 110px;
+}
+
+.fa-bars:before,
+.fa-xmark:before {
+    font-size: 100px;
+    margin-right: 0px;
+}
+
+#main-navbar li p {
+    font-size: 35px;
+}
+
+p {
+    font-size: 26px;
+}
+
+#main-navbar {
+    height: 100vh;
+    font-size: 36px;
+}
+
+#main-section-1 {
+    padding-top: 15%;
+}
+
+#main-section-1 h1 {
+    font-size: 33px;
+}
+
+#main-section-1 h2 {
+    margin-top: 3%;
+    font-size: 55px;
+}
+
+#main-section-1 h3 {
+    font-size: 35px;
+}
+
+#main-section-1 p {
+    margin-top: 8%;
+    font-size: 25px;
+}
+
+#main-section-2 img.aos-init.aos-animate {
+    width: 60%;
+}
+
+
+section h4 {
+    font-size: 35px;
+}
+
+.section-header {
+    font-size: 30px;
+}
+
+#main-section-2 .section-2-div-tech h5 {
+    font-size: 32px;
+}
+
+#main-section-2 img.aos-init.aos-animate {
+    width: 60%;
+}
+
+#main-section-2 .section-2-div-tech-list div {
+    width: 31%;
+}
+
+#main-section-2 .section-2-div-tech-list {
+    justify-content: space-evenly;
+}
+
+
+
+#main-section-2 .section-2-div-tech .box {
+    display: block;
+    position: relative;
+    margin-top: 6%;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    -webkit-animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(3000px) rotateY(0deg);
+        -webkit-transform: perspective(3000px) rotateY(0deg);
+        -moz-transform: perspective(3000px) rotateY(0deg);
+        -ms-transform: perspective(3000px) rotateY(0deg);
+        -o-transform: perspective(3000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(3000px) rotateY(360deg);
+        -webkit-transform: perspective(3000px) rotateY(360deg);
+        -moz-transform: perspective(3000px) rotateY(360deg);
+        -ms-transform: perspective(3000px) rotateY(360deg);
+        -o-transform: perspective(3000px) rotateY(360deg);
+    }
+}
+
+#main-section-2 .section-2-div-tech .box span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: rgba(40, 19, 19, 0.65);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(40, 19, 19, 0.325);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(280px);
+    -webkit-transform: rotateY(calc(var(--i) * 60deg)) translateZ(280px);
+    -moz-transform: rotateY(calc(var(--i) * 60deg)) translateZ(280px);
+    -ms-transform: rotateY(calc(var(--i) * 60deg)) translateZ(280px);
+    -o-transform: rotateY(calc(var(--i) * 60deg)) translateZ(280px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0002);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#main-section-2 .section-2-div-tech .box span p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 21px;
+    color: rgb(196, 23, 23);
+    width: 100%;
+    text-align: center;
+}
+
+#main-section-2 .section-2-div-tech .box span i:before,
+#main-section-2 .section-2-div-tech .box span iconify-icon {
+    font-size: 50px;
+}
+
+
+
+
+
+/* SECTION 3 */
+
+#main-section-3 .section-3-div-expe h5 {
+    font-size: 40px;
+    margin-top: 4%;
+}
+
+#main-section-3 .section-3-div-expe-compet p {
+    margin-bottom: 12%;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div p {
+    font-size: 28px;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div li {
+    font-size: 28px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box a {
+    font-size: 50px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box p {
+    font-size: 25px;
+}
+
+#main-section-4 .section-4-div-projects ul li {
+    font-size: 22px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box i:before {
+    font-size: 50px;
+}
+
+form label {
+    font-size: 30px;
+}
+
+form {
+    margin: 91px;
+}
+
+form input {
+    font-size: 27px;
+    height: 40px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box {
+    width: 80%;
+}

@@ -24,7 +24,7 @@
         <span class="loader"></span>
     </div>-->
     <div id="main">
-        <header class="main-header" data-aos="fade-down" data-aos-delay="1000">
+        <header class="main-header" data-aos="fade-down" data-aos-delay="3000">
             <!--<img src="{{ url_for('static', filename='img/logo_.png') }}">-->
             <img src="../static/img/logo_.png">
             <div class="main-header-social">
@@ -45,7 +45,7 @@
         </div>
 
 
-        <nav class="main-nav-categories" data-aos="fade-right" data-aos-delay="2200">
+        <nav class="main-nav-categories" data-aos="fade-right" data-aos-delay="3000">
             <ul class='main-nav-categories-ul'>
               <li><a href="#main-section-2">01</a></li>
               <li><a href="#main-section-3">02</a></li>
@@ -55,7 +55,8 @@
         </nav>
 
         <section id="main-section-1">
-            <h1 data-aos="fade-down-right" data-aos-delay="1000">Bonjour, je suis</h1>
+            <div id="container"></div>
+            <!-- <h1 data-aos="fade-down-right" data-aos-delay="1000">Bonjour, je suis</h1>
             <h2 data-aos="fade-down-right" data-aos-delay="1500">Thomas.C</h2>
             <h3 data-aos="fade-right" data-aos-delay="2000">Développeur de choses et d'autres</h3>
             <p data-aos="fade-up" data-aos-delay="2500">
@@ -63,7 +64,7 @@
             </p>
             <div>
                 <button class="btn-70" data-aos="zoom-in" data-aos-delay="3000" data-aos-duration="2500">CV</button>
-            </div>
+            </div>-->
         </section>
 
 
@@ -168,7 +169,7 @@
                         <p>Coin Centraliz est un agrégateur de contenu liées au domaine de la cryptomonnaie.
                             Plusieurs type de contenu sont disponible :
                             <br>
-                            <br>Articles de journaux numérique 
+                            <br>Articles de journaux 
                             <br>Vidéos et podcasts 
                             <br>Chaines Twitch en live 
                             <br>Thread Twitter 
@@ -195,7 +196,7 @@
                         <div>
                             <a href="https://github.com/Kyytox/bitcoin_quizz" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                         </div>
-                        <p>Gagnez des Satoshis avec Bitcoin Quiz. Découvrez ou testez vos connaissances sur le Bitcoin et son écosystème
+                        <p>Gagnez des Satoshis avec Bitcoin Quiz. Découvrez ou testez vos connaissances sur Bitcoin et son écosystème
                             <br>
                             <br> 10 Questions par partie
                             <br> 2 satoshis par bonne réponse
@@ -225,11 +226,9 @@
                         </div>
                         <p>Ecouter les nouveaux extraits de vinyls des différents shops Reggae Dub.
                             <br><br>
-                            Tous les 3 jours des nouveaux vinyls sont ajoutés.
-                            <br><br>
-                            Vous pouvez écouter ces extraits via un lectuer intégré.
+                            Tous les 3 jours des nouveaux vinyls sont ajoutés et vous pouvez écouter les écoutés via un lectuer intégré.
                             <br><br> 
-                            Un compte utilisateur peut etre créé pour ajouter certains vinyls à ses favoris.
+                            Un compte utilisateur peut etre créé pour ajouter certains vinyls en favoris.
                         </p>
                         <ul>
                             <li>Python</li>
@@ -279,6 +278,306 @@
             delay: 0, // values from 0 to 3000, with step 50ms
             duration: 1300, // values from 0 to 3000, with step 50ms
           });
+    </script>
+    <script type="importmap">
+        {
+        "imports": {
+         "three": "https://unpkg.com/three/build/three.module",
+            "three/": "https://unpkg.com/three/"
+        }
+       }
+    </script>
+    <script type="module">
+
+        import * as THREE from "https://unpkg.com/three/build/three.module.js";
+
+        import { TrackballControls } from 'https://unpkg.com/three/examples/jsm/controls/TrackballControls.js';
+        import { CSS3DRenderer, CSS3DObject } from 'https://unpkg.com/three/examples/jsm/renderers/CSS3DRenderer.js';
+        import { TWEEN } from 'https://unpkg.com/three/examples/jsm/libs/tween.module.min.js';
+
+
+        const table = [
+            'B', 1, 1,
+            'o', 2, 1,
+            'n', 3, 1,
+            'j', 4, 1,
+            'o', 5, 1,
+            'u', 6, 1,
+            'r', 7, 1,
+            ' ', 8, 1,
+            'j', 9, 1,
+            'e', 10, 1,
+            ' ', 11, 1,
+            's', 12, 1,
+            'u', 13, 1,
+            'i', 14, 1,
+            's', 15, 1,
+            ',', 16, 1,
+            'T', 1, 2,
+            'h', 2, 2,
+            'o', 3, 2,
+            'm', 4, 2,
+            'a', 5, 2,
+            's', 6, 2,
+            '.', 7, 2,
+            'C', 8, 2,
+            'D', 1, 3,
+            'e', 2, 3,
+            'v', 3, 3,
+            'e', 4, 3,
+            'l', 5, 3,
+            'o', 6, 3,
+            'p', 7, 3,
+            'p', 8, 3,
+            'e', 9, 3,
+            'u', 10, 3,
+            'r', 11, 3,
+            ' ', 12, 3,
+            'd', 13, 3,
+            'e', 14, 3,
+            ' ', 15, 3,
+            'c', 16, 3,
+            'h', 17, 3,
+            'o', 18, 3,
+            's', 19, 3,
+            'e', 20, 3,
+            's', 21, 3,
+            ' ', 22, 3,
+            'e', 23, 3,
+            't', 24, 3,
+            ' ', 25, 3,
+            'd', 26,3,
+            "'", 27, 3,
+            'a', 28, 3,
+            'u', 29, 3,
+            't', 30, 3,
+            'r', 31, 3,
+            'e', 32, 3,
+            's', 33, 3,
+            'V', 1, 4,
+            'o', 2, 4,
+            'i', 3, 4,
+            'c', 4, 4,
+            'i', 5, 4,
+            ' ', 6, 4,
+            'u', 7, 4,
+            'n', 8, 4,
+            'e', 9, 4,
+            ' ', 10, 4,
+            'p', 11, 4,
+            'r', 12, 4,
+            'é', 13, 4,
+            's', 14, 4,
+            'e', 15, 4,
+            'n', 16, 4,
+            't', 17, 4,
+            'a', 18, 4,
+            't', 19, 4,
+            'i', 20, 4,
+            'o', 21, 4,
+            'n', 22, 4,
+            ' ', 23, 4,
+            'd', 24, 4,
+            'e', 25, 4,
+            ' ', 26, 4,
+            'm', 27, 4,
+            'e', 28, 4,
+            's', 29, 4,
+            ' ', 30, 4,
+            'd', 31, 4,
+            'i', 32, 4,
+            'f', 33, 4,
+            'f', 34, 4,
+            'é', 35, 4,
+            'r', 36, 4,
+            'e', 37, 4,
+            'n', 38, 4,
+            't', 39, 4,
+            'e', 40, 4,
+            's', 41, 4,
+            ' ', 42, 4,
+            'e', 43, 4,
+            'x', 44, 4,
+            'p', 45, 4,
+            'é', 46, 4,
+            'r', 47, 4,
+            'i', 48, 4,
+            'e', 49, 4,
+            'n', 50, 4,
+            'c', 51, 4,
+            'e', 52, 4,
+            's', 53, 4,
+            ' ', 54, 4,
+            'e', 1, 5,
+            't', 2, 5,
+            ' ', 3, 5,
+            'd', 4, 5,
+            'e', 5, 5,
+            ' ', 6, 5,
+            'm', 7, 5,
+            'e', 8, 5,
+            's', 9, 5,
+            ' ', 10, 5,
+            'p', 11, 5,
+            'r', 12, 5,
+            'o', 13, 5,
+            'j', 14, 5,
+            'e', 15, 5,
+            't', 16, 5,
+            's', 17, 5,
+            ' ', 18, 5,
+            'p', 19, 5,
+            'e', 20, 5,
+            'r', 21, 5,
+            's', 22, 5,
+            'o', 23, 5,
+            's', 24, 5
+        ];
+
+        let camera, scene, renderer;
+        let controls;
+
+        const objects = [];
+        const targets = { table: [], sphere: [], helix: [], grid: [] };
+
+        init();
+        animate();
+
+        function init() {
+
+            camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 10000 );
+            camera.position.z = 4000;
+
+            scene = new THREE.Scene();
+
+            // table
+
+            for ( let i = 0; i < table.length; i += 3 ) {
+
+                if (i < 48){
+                    var element = document.createElement( 'h1' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 10, 60)
+                } else if (i < 72 ) {
+                    var element = document.createElement( 'h2' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 70, 70)
+                } else if (i < 170 ) {
+                    var element = document.createElement( 'h3' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 110, 60)
+                }else if (i < 333 ){
+                    var element = document.createElement( 'p' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 140, 40)
+                }else {
+                    var element = document.createElement( 'p' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 135, 40)
+                }
+            }
+
+            //
+
+            renderer = new CSS3DRenderer();
+            console.log( window.innerWidth, window.innerHeight )
+            renderer.setSize( window.innerWidth /1.2, window.innerHeight );
+            document.getElementById( 'container' ).appendChild( renderer.domElement );
+
+            //
+
+
+            transform( targets.table, 3500 );
+
+            //
+
+            window.addEventListener( 'resize', onWindowResize );
+
+        }
+
+        function createObject(i, element, posY, posX) {
+
+            const objectCSS = new CSS3DObject( element );
+            objectCSS.position.x = Math.random() * 4000 - 2000;
+            objectCSS.position.y = Math.random() * 4000 - 2000;
+            objectCSS.position.z = Math.random() * 4000 - 2000;
+            scene.add( objectCSS );
+
+            objects.push( objectCSS );
+
+            //
+
+            const object = new THREE.Object3D();
+            object.position.x = ( table[ i + 1 ] * posX ) - 1000;
+            object.position.y = - ( table[ i + 2 ] * posY ) + 600;
+
+            targets.table.push( object );
+            return
+
+        }
+
+        function transform( targets, duration ) {
+
+            TWEEN.removeAll();
+
+            for ( let i = 0; i < objects.length; i ++ ) {
+
+                const object = objects[ i ];
+                const target = targets[ i ];
+                console.log(target.position.x, target.position.y, target.position.z)
+
+                // position final after transform
+                new TWEEN.Tween( object.position )
+                    .to( { x: target.position.x-500, y: target.position.y+200, z: target.position.z }, Math.random() * duration + duration )
+                    .easing( TWEEN.Easing.Exponential.InOut )
+                    .start();
+
+                new TWEEN.Tween( object.rotation )
+                    .to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
+                    .easing( TWEEN.Easing.Exponential.InOut )
+                    .start();
+
+            }
+
+            new TWEEN.Tween( this )
+                .to( {}, duration * 2 )
+                .onUpdate( render )
+                .start();
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+            render();
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            TWEEN.update();
+
+            //controls.update();
+
+        }
+
+        function render() {
+
+            renderer.render( scene, camera );
+
+        }
+
     </script>
 </body>
 </html>

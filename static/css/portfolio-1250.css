@@ -11,10 +11,6 @@
     }
 }
 
-body {
-    /* background-color: rgb(180, 161, 161); */
-}
-
 header img {
     width: 70px;
 }
@@ -79,13 +75,18 @@ p {
     color: rgba(219, 52, 52);
     text-decoration: none;
     margin-bottom: 20px;
-    text-decoration: underline 0.15em rgb(10, 10, 10);
+    text-decoration: underline 0.15em rgba(219, 52, 52);
     text-underline-offset: 0.4em;
     transition: text-decoration-color 1s, text-underline-offset 2ms;
     -webkit-transition: text-decoration-color 1s, text-underline-offset 2ms;
     -moz-transition: text-decoration-color 1s, text-underline-offset 2ms;
     -ms-transition: text-decoration-color 1s, text-underline-offset 2ms;
     -o-transition: text-decoration-color 1s, text-underline-offset 2ms;
+}
+
+.main-nav-categories-ul li a:active {
+    text-decoration: none;
+    border: 0;
 }
 
 .main-nav-categories-ul li a.current {
@@ -133,28 +134,33 @@ p {
 /* ********************************* SECTION_1 ****************************************************** */
 
 #main-section-1 {
-    padding-top: 8%;
+    padding-top: 0%;
     height: 70vh;
-    padding-bottom: 15%;
+    padding-bottom: 17%;
 }
 
 #main-section-1 h1 {
-    font-size: 25px;
+    font-size: 100px;
 }
 
 #main-section-1 h2 {
     margin-top: 1%;
-    font-size: 45px;
+    font-size: 110px;
 }
 
 #main-section-1 h3 {
-    font-size: 25px;
+    font-size: 100px;
+}
+
+#main-section-1 div {
+    text-align: center;
+    margin-top: 0%;
 }
 
 #main-section-1 p {
-    margin-top: 4%;
-    font-size: 22px;
-    width: 55%;
+    margin-top: 0%;
+    font-size: 50px;
+    /* width: 55%; */
 }
 
 #main-section-1 img.aos-init.aos-animate {
@@ -418,4 +424,38 @@ form input#submit {
 #main-section-2 .section-2-div-tech .box span i:before,
 #main-section-2 .section-2-div-tech .box span iconify-icon {
     font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container a {
+    color: #8ff;
+}
+
+#container .element {
+    width: 80px;
+    height: 80px;
+    font-family: myFirstFont;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    box-shadow: 1px;
+}
+
+#container div:nth-child(1) {
+    /* border: 1px solid yellow; */
 }

@@ -6,6 +6,8 @@ from wtforms import StringField, TextAreaField, SubmitField, validators
 from wtforms.validators import DataRequired, Email
 import email_validator
 import json
+import mimetypes
+mimetypes.add_type('application/javascript', '.mjs')
  
 class ContactForm(FlaskForm):
   name = StringField("Nom", validators=[DataRequired()])
@@ -78,6 +80,16 @@ def tools():
     print(df)
     return render_template('tools/tools.html',categories=categories, df=df, dfLen=dfLen, xDelay=xDelay)
 
+
+
+
+
+
+
+@app.route('/test', methods=["GET", "POST"])
+def test():
+
+    return render_template('tools/test.html' )
 
 # main driver function
 if __name__ == '__main__':

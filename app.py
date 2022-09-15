@@ -49,7 +49,7 @@ def portfolio():
             form.email.data = ''
             form.subject.data = ''
             form.message.data = ''
-            msg = 'Mail Envoyé avec succès' 
+            msg = 'Mail Envoye avec succes' 
             return render_template('portfolio/portfolio.html', form=form, msg=msg)
         return render_template('portfolio/portfolio.html', form=form, msg=msg)
 

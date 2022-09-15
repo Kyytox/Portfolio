@@ -1,18 +1,25 @@
 /* Tablette and phone */
 
-
-body {
-    /* background-color: rgb(180, 161, 161); */
-}
-
 header img {
-    width: 110px;
+    width: 100px;
 }
 
-.fa-bars:before,
-.fa-xmark:before {
-    font-size: 100px;
+.fa-bars:before {
+    font-size: 80px;
     margin-right: 0px;
+}
+
+.fa-xmark:before {
+    font-size: 80px;
+    margin-right: 65px;
+}
+
+header.main-header .main-header-social {
+    margin-top: -140px;
+}
+
+header.main-header .main-header-social i:before {
+    font-size: 30px;
 }
 
 #main-navbar li p {
@@ -20,7 +27,7 @@ header img {
 }
 
 p {
-    font-size: 26px;
+    font-size: 18px;
 }
 
 #main-navbar {
@@ -28,25 +35,55 @@ p {
     font-size: 36px;
 }
 
+
+section h4 {
+    font-size: 30px;
+}
+
+.section-header {
+    font-size: 30px;
+}
+
+/**************** SECTION 1 ******************************************************/
+
 #main-section-1 {
-    padding-top: 15%;
+    padding-top: 0;
+    height: 92vh;
+}
+
+#main-section-1 div {
+    left: 42%;
+    top: 20px;
+    margin-top: 0;
+    /* margin-left: 18px; */
 }
 
 #main-section-1 h1 {
-    font-size: 33px;
+    font-size: 90px;
 }
 
 #main-section-1 h2 {
     margin-top: 3%;
-    font-size: 55px;
+    font-size: 100px;
 }
 
 #main-section-1 h3 {
-    font-size: 35px;
+    font-size: 70px;
 }
 
 #main-section-1 p {
     margin-top: 8%;
+    font-size: 55px;
+}
+
+
+/**************** SECTION 2 ******************************************************/
+
+#main-section-2 {
+    padding-bottom: 30%;
+}
+
+#main-section-2 .section-2-div-tech h5 {
     font-size: 25px;
 }
 
@@ -54,32 +91,9 @@ p {
     width: 60%;
 }
 
-
-section h4 {
-    font-size: 35px;
+#main-section-2 .section-2-div-about-me p {
+    padding-left: 40px;
 }
-
-.section-header {
-    font-size: 30px;
-}
-
-#main-section-2 .section-2-div-tech h5 {
-    font-size: 32px;
-}
-
-#main-section-2 img.aos-init.aos-animate {
-    width: 60%;
-}
-
-#main-section-2 .section-2-div-tech-list div {
-    width: 31%;
-}
-
-#main-section-2 .section-2-div-tech-list {
-    justify-content: space-evenly;
-}
-
-
 
 #main-section-2 .section-2-div-tech .box {
     display: block;
@@ -88,26 +102,8 @@ section h4 {
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
-    animation: animate 20s linear infinite;
-    -webkit-animation: animate 20s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: perspective(3000px) rotateY(0deg);
-        -webkit-transform: perspective(3000px) rotateY(0deg);
-        -moz-transform: perspective(3000px) rotateY(0deg);
-        -ms-transform: perspective(3000px) rotateY(0deg);
-        -o-transform: perspective(3000px) rotateY(0deg);
-    }
-
-    100% {
-        transform: perspective(3000px) rotateY(360deg);
-        -webkit-transform: perspective(3000px) rotateY(360deg);
-        -moz-transform: perspective(3000px) rotateY(360deg);
-        -ms-transform: perspective(3000px) rotateY(360deg);
-        -o-transform: perspective(3000px) rotateY(360deg);
-    }
+    animation: animateBox 20s linear infinite;
+    -webkit-animation: animateBox 20s linear infinite;
 }
 
 #main-section-2 .section-2-div-tech .box span {
@@ -118,8 +114,8 @@ section h4 {
     flex-direction: column;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     background: rgba(40, 19, 19, 0.65);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
@@ -142,7 +138,7 @@ section h4 {
 #main-section-2 .section-2-div-tech .box span p {
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 21px;
+    font-size: 24px;
     color: rgb(196, 23, 23);
     width: 100%;
     text-align: center;
@@ -150,14 +146,14 @@ section h4 {
 
 #main-section-2 .section-2-div-tech .box span i:before,
 #main-section-2 .section-2-div-tech .box span iconify-icon {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 
 
 
 
-/* SECTION 3 */
+/**************** SECTION 3 ******************************************************/
 
 #main-section-3 .section-3-div-expe h5 {
     font-size: 40px;
@@ -165,46 +161,89 @@ section h4 {
 }
 
 #main-section-3 .section-3-div-expe-compet p {
-    margin-bottom: 12%;
+    margin-bottom: 10%;
+    padding-left: 40px;
+}
+
+#main-section-3 .section-3-div-expe-compet-list div {
+    width: 70%;
 }
 
 #main-section-3 .section-3-div-expe-compet-list div p {
-    font-size: 28px;
+    font-size: 23px;
 }
 
 #main-section-3 .section-3-div-expe-compet-list div li {
-    font-size: 28px;
+    font-size: 21px;
 }
 
-#main-section-4 .section-4-div-projects .section-4-div-projects-box a {
-    font-size: 50px;
-}
 
-#main-section-4 .section-4-div-projects .section-4-div-projects-box p {
-    font-size: 25px;
-}
 
-#main-section-4 .section-4-div-projects ul li {
-    font-size: 22px;
-}
 
-#main-section-4 .section-4-div-projects .section-4-div-projects-box i:before {
-    font-size: 50px;
-}
-
-form label {
-    font-size: 30px;
-}
-
-form {
-    margin: 91px;
-}
-
-form input {
-    font-size: 27px;
-    height: 40px;
+/**************** SECTION 4 ******************************************************/
+#main-section-4 {
+    padding-bottom: 25%;
 }
 
 #main-section-4 .section-4-div-projects .section-4-div-projects-box {
-    width: 80%;
+    width: 90%;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box a {
+    font-size: 40px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box-descr div,
+#main-section-4 .section-4-div-projects .section-4-div-projects-box div a {
+    margin-right: 0%;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box div a {
+    margin-left: 10px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box:nth-child(2) div a {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box p {
+    font-size: 22px;
+    padding: 20px;
+}
+
+#main-section-4 .section-4-div-projects ul {
+    margin-top: 3%;
+}
+
+#main-section-4 .section-4-div-projects ul li {
+    font-size: 18px;
+}
+
+#main-section-4 .section-4-div-projects .section-4-div-projects-box i:before {
+    font-size: 30px;
+}
+
+form label {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+form {
+    margin: 31px;
+}
+
+form input {
+    font-size: 24px;
+    height: 40px;
+    margin-bottom: 7%;
+    padding: 8px;
+}
+
+form textarea {
+    height: 250px;
+    font-size: 24px;
 }

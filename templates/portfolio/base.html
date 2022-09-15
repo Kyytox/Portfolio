@@ -25,21 +25,6 @@
     if (document.getElementById("main-section-5-div-contact-msg")) {
         window.location.hash = "main-section-5";
     }
-    setTimeout(() => {
-        console.log("this is the first message")
-        
-        $("#loading").delay(1000).fadeOut("slow");
-        console.log(document.getElementById("loading"))
-        document.getElementById("loading").classList.add('hidden')
-        $("#main").delay(1).fadeIn("slow");
-        document.getElementById("main").classList.add('active')
-
-        }, 5000);
-
-    $(window).load(function() {
-        $("#loading").delay(1000).fadeOut("slow");
-        $("#main").delay(1).fadeIn("slow");
-    })
 
     function openNavbar(){
         document.getElementById("main-navbar").classList.add('is-visible')

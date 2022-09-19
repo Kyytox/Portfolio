@@ -1,0 +1,25 @@
+<div data-aos="flip-left" class="section-header" style="flex-direction: row-reverse">
+    <span>.04</span><h4>Contact</h4><hr></hr>
+</div>
+<div class="main-section-5-div-contact">
+    {% if msg != '' %}
+        <span id="main-section-5-div-contact-msg"> {{ msg }} </span>
+    {% endif %}
+    <form id="contact-form" action="{{ url_for('portfolio') }}" method=post data-aos="zoom-out-right" data-aos-delay="500">
+        {{ form.csrf_token }}
+
+        {{ form.name.label }}
+        {{ form.name }}
+    
+        {{ form.email.label }}
+        {{ form.email }}
+    
+        {{ form.subject.label }}
+        {{ form.subject }}
+    
+        {{ form.message.label }}
+        {{ form.message }}
+    
+        {{ form.submit }}
+    </form>
+</div>

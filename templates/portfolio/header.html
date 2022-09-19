@@ -4,5 +4,15 @@
     <a href="https://github.com/Kyytox"><i class="fa-brands fa-github" alt="GitHub"></i></a>
     <a href="#main-section-5"><i class="fa-solid fa-envelope" alt="E-mail"></i></a>
     <a href=""><i class="fa-brands fa-linkedin" alt="Linkedin"></i></a>
+    <a href=""><i class="fa-sharp fa-solid fa-address-card" alt='CV'></i></a>
+    
+    <form action="{{ url_for('portfolio') }}" method="GET">
+        <input type="hidden" name="lang" value="FR">
+        <button type="submit"><img src="../static/img/flag_FR.png"></button>
+    </form>
+    <form action="{{ url_for('portfolio') }}" method="GET">
+        <input type="hidden" name="lang" value="EN">
+        <button type="submit"><img src="../static/img/flag_EN.png"></button>
+    </form>
 </div>
 <i class="fa-solid fa-bars" onclick="openNavbar()" ></i>

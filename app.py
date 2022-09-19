@@ -36,6 +36,10 @@ def portfolio():
     form = ContactForm()
     msg = ''
     if request.method == 'GET':
+        if request.values:
+            templ = 'portfolio/portfolio_EN.html' if request.values['lang'] == "EN" else 'portfolio/portfolio.html' 
+            return render_template(templ, form=form, msg=msg)
+
         return render_template('portfolio/portfolio.html', form=form, msg=msg)
     elif request.method == 'POST':
         if form.validate_on_submit():
@@ -88,7 +92,6 @@ def tools():
 
 @app.route('/test', methods=["GET", "POST"])
 def test():
-
     return render_template('tools/test.html' )
 
 # main driver function

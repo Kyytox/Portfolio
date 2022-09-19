@@ -128,6 +128,7 @@ header.main-header {
 }
 
 header.main-header .main-header-social {
+    display: flex;
     padding: 10px;
     margin-top: -110px;
     max-height: 39px;
@@ -159,7 +160,31 @@ header.main-header .main-header-social i:hover:before {
     color: rgba(219, 52, 52);
 }
 
+header.main-header .main-header-social button {
+    border: 0;
+    padding: 0;
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    background: transparent;
+    margin-right: 3px;
+}
 
+header.main-header .main-header-social button img {
+    width: 25px;
+    height: 15px;
+}
+
+header.main-header .main-header-social form {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+}
+
+
+header.main-header .main-header-social a:nth-child(4) {
+    margin-right: 20px;
+}
 
 header img {
     width: 90px;
@@ -1278,7 +1303,7 @@ form input#submit {
     }
 
     #main-section-4 .section-4-div-projects .section-4-div-projects-box p {
-        font-size: 17px;
+        font-size: 15px;
         padding: 11px;
     }
 
@@ -1317,7 +1342,7 @@ form input#submit {
     #main-section-4 .section-4-div-projects .section-4-div-projects-box:nth-child(4) .section-4-div-projects-box-descr:nth-child(2) {
         margin-bottom: 8%;
         left: 0;
-        top: 45px;
+        top: -15px;
     }
 
     #main-section-4 .section-4-div-projects .section-4-div-projects-box:nth-child(3) .section-4-div-projects-box-descr ul {
@@ -1353,7 +1378,7 @@ form input#submit {
         z-index: 2;
         width: 52%;
         left: 41%;
-        top: 40px;
+        top: -15px;
     }
 
 

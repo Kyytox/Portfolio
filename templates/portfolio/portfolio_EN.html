@@ -1,0 +1,364 @@
+{% extends "./portfolio/base.html" %}
+
+{% block content %} 
+
+    <div id="main">
+        <header class="main-header" data-aos="fade-down" data-aos-delay="3000">
+            {% include "./portfolio/header.html" %}
+        </header>
+        
+        {% include "./portfolio/navbar_EN.html" %}
+
+        <nav class="main-nav-categories" data-aos="fade-right" data-aos-delay="3000">
+            <ul class='main-nav-categories-ul'>
+              <li><a href="#main-section-2">01</a></li>
+              <li><a href="#main-section-3">02</a></li>
+              <li><a href="#main-section-4">03</a></li>
+              <li><a href="#main-section-5">04</a></li>
+            </ul>
+        </nav>
+
+        <section id="main-section-1">
+            <div id="container"></div>
+        </section>
+
+        <section id="main-section-2">
+            {% include "./portfolio/presentation_EN.html" %}
+        </section>
+
+        <section id="main-section-3">
+            {% include "./portfolio/expPro_EN.html" %}
+        </section>
+
+        <section id="main-section-4">
+            {% include "./portfolio/projects_EN.html" %}
+        </section>
+
+        <section id="main-section-5">
+            {% include "./portfolio/contact_EN.html" %}
+        </section>
+    </div>
+
+
+    <script>
+        AOS.init({          
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1300, // values from 0 to 3000, with step 50ms
+          });
+    </script>
+    <script type="importmap">
+        {
+        "imports": {
+         "three": "https://unpkg.com/three/build/three.module",
+            "three/": "https://unpkg.com/three/"
+        }
+       }
+    </script>
+    <script type="module">
+
+        import * as THREE from "https://unpkg.com/three/build/three.module.js";
+
+        import { TrackballControls } from 'https://unpkg.com/three/examples/jsm/controls/TrackballControls.js';
+        import { CSS3DRenderer, CSS3DObject } from 'https://unpkg.com/three/examples/jsm/renderers/CSS3DRenderer.js';
+        import { TWEEN } from 'https://unpkg.com/three/examples/jsm/libs/tween.module.min.js';
+        
+        const table = [
+            'H', 1, 1,
+            'i', 2, 1,
+            ' ', 3, 1,
+            'I', 4, 1,
+            "'", 5, 1,
+            'm', 6, 1,
+            ',', 7, 1,
+            'T', 1, 2,
+            'h', 2, 2,
+            'o', 3, 2,
+            'm', 4, 2,
+            'a', 5, 2,
+            's', 6, 2,
+            ' ', 7, 2,
+            'a', 8, 2,
+            'k', 9, 2,
+            'a', 10, 2,
+            ' ', 11, 2,
+            'K', 12, 2,
+            'y', 13, 2,
+            't', 14, 2,
+            'o', 15, 2,
+            'x', 16, 2,
+            'D', 1, 3,
+            'e', 2, 3,
+            'v', 3, 3,
+            'e', 4, 3,
+            'l', 5, 3,
+            'o', 6, 3,
+            'p', 7, 3,
+            'e', 8, 3,
+            'r', 9, 3,
+            'o', 1, 4,
+            'f', 2, 4,
+            ' ', 3, 4,
+            't', 4, 4,
+            'h', 5, 4,
+            'i', 6, 4,
+            'n', 7, 4,
+            'g', 8, 4,
+            's', 9, 4,
+            ' ', 10, 4,
+            'a', 11, 4,
+            'n', 12, 4,
+            'd', 13, 4,
+            ' ', 14, 4,
+            'o', 15, 4,
+            't', 16, 4,
+            "h", 17, 4,
+            'e', 18, 4,
+            'r', 19, 4,
+            's', 20, 4,
+            'H', 1, 5,
+            'e', 2, 5,
+            'r', 3, 5,
+            'e', 4, 5,
+            ' ', 5, 5,
+            'i', 6, 5,
+            's', 7, 5,
+            ' ', 8, 5,
+            'a', 9, 5,
+            ' ', 10, 5,
+            'p', 11, 5,
+            'r', 12, 5,
+            'e', 13, 5,
+            's', 14, 5,
+            'e', 15, 5,
+            'n', 16, 5,
+            't', 17, 5,
+            'a', 18, 5,
+            't', 19, 5,
+            'i', 20, 5,
+            'o', 21, 5,
+            'n', 22, 5,
+            ' ', 23, 5,
+            'o', 24, 5,
+            'f', 25, 5,
+            ' ', 26, 5,
+            'm', 27, 5,
+            'y', 28, 5,
+            ' ', 29, 5,
+            'd', 30, 5,
+            'i', 31, 5,
+            'f', 32, 5,
+            'f', 33, 5,
+            'e', 34, 5,
+            'r', 35, 5,
+            'e', 36, 5,
+            'n', 37, 5,
+            't', 38, 5,
+            'e', 1, 6,
+            'x', 2, 6,
+            'p', 3, 6,
+            'e', 4, 6,
+            'r', 5, 6,
+            'i', 6, 6,
+            'e', 7, 6,
+            'n', 8, 6,
+            'c', 9, 6,
+            'e', 10, 6,
+            's', 11, 6,
+            ' ', 12, 6,
+            'a', 13, 6,
+            'n', 14, 6,
+            'd', 15, 6,
+            ' ', 16, 6,
+            'm', 17, 6,
+            'y', 18, 6,
+            ' ', 19, 6,
+            'p', 20, 6,
+            'e', 21, 6,
+            'r', 22, 6,
+            's', 23, 6,
+            'o', 24, 6,
+            'n', 25, 6,
+            'a', 26, 6,
+            'l', 27, 6,
+            ' ', 28, 6,
+            'p', 29, 6,
+            'r', 30, 6,
+            'o', 31, 6,
+            'j', 32, 6,
+            'e', 33, 6,
+            'c', 34, 6,
+            't', 35, 6,
+            's', 36, 6
+        ];
+
+        var section = document.getElementById("main-section-1");
+        let camera, scene, renderer;
+        let controls;
+
+        const objects = [];
+        const targets = { table: [], sphere: [], helix: [], grid: [] };
+
+        init();
+        animate();
+
+        function init() {
+            camera = new THREE.PerspectiveCamera( 40, section.clientWidth / section.clientHeight, 1, 10000 );
+            camera.position.z = 2000;
+
+            //console.log( section.clientWidth, section.clientHeight )
+
+            scene = new THREE.Scene();
+
+            // table
+
+            for ( let i = 0; i < table.length; i += 3 ) {
+
+                if (i < 20){
+                    var element = document.createElement( 'h1' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    createObject(i, element, 40, 30)
+                } else if (i < 40 ) {
+                    var element = document.createElement( 'h2' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    if(section.clientWidth < 1000){
+                        createObject(i, element, 60, 60)
+                    }else {
+                        createObject(i, element, 70, 90)
+                    }    
+                } else if (i < 69 ) {
+                    var element = document.createElement( 'h4' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    if(section.clientWidth < 1000){
+                        createObject(i, element, 67, 30)
+                    }else {
+                        createObject(i, element, 85, 30)
+                    }                        
+                } else if (i < 156 ) {
+                    var element = document.createElement( 'h3' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    if(section.clientWidth < 1000){
+                        createObject(i, element, 90, 30)
+                    }else {
+                        createObject(i, element, 110, 70)                    
+                    }
+                }else if (i < 270 ){
+                    var element = document.createElement( 'p' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    if(section.clientWidth < 1000){
+                        createObject(i, element, 110, 18)
+                    }else {
+                        createObject(i, element, 170, 25)                   
+                    }
+                }else {
+                    var element = document.createElement( 'p' );
+                    element.className = 'element';
+                    element.textContent = table[ i ];
+                    if(section.clientWidth < 1000){
+                        createObject(i, element, 105, 18)
+                    }else {
+                        createObject(i, element, 155, 25)                   
+                    }
+                }
+            }
+
+            //
+
+            renderer = new CSS3DRenderer();
+            renderer.setSize( section.clientWidth, section.clientHeight );
+            document.getElementById( 'container' ).appendChild( renderer.domElement );
+
+            //
+
+
+            transform( targets.table, 3500 );
+
+            //
+
+            section.addEventListener( 'resize', onsectionResize );
+
+        }
+
+        function createObject(i, element, posY, posX) {
+
+            const objectCSS = new CSS3DObject( element );
+            objectCSS.position.x = Math.random() * 4000 - 2000;
+            objectCSS.position.y = Math.random() * 4000 - 2000;
+            objectCSS.position.z = Math.random() * 4000 - 2000;
+            scene.add( objectCSS );
+
+            objects.push( objectCSS );
+
+            //
+
+            const object = new THREE.Object3D();
+            object.position.x = ( table[ i + 1 ] * posX ) - 1000;
+            object.position.y = - ( table[ i + 2 ] * posY ) + 600;
+
+            targets.table.push( object );
+            return
+
+        }
+
+        function transform( targets, duration ) {
+
+            TWEEN.removeAll();
+
+            for ( let i = 0; i < objects.length; i ++ ) {
+
+                const object = objects[ i ];
+                const target = targets[ i ];
+
+                // position final after transform
+                new TWEEN.Tween( object.position )
+                    .to( { x: target.position.x, y: target.position.y, z: target.position.z-100 }, Math.random() * duration + duration )
+                    .easing( TWEEN.Easing.Exponential.InOut )
+                    .start();
+
+                new TWEEN.Tween( object.rotation )
+                    .to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
+                    .easing( TWEEN.Easing.Exponential.InOut )
+                    .start();
+
+            }
+
+            new TWEEN.Tween( this )
+                .to( {}, duration * 2 )
+                .onUpdate( render )
+                .start();
+
+        }
+
+        function onsectionResize() {
+
+            camera.aspect = section.clientWidth / section.clientHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( section.clientWidth, section.clientHeight );
+
+            render();
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            TWEEN.update();
+
+            //controls.update();
+
+        }
+
+        function render() {
+
+            renderer.render( scene, camera );
+
+        }
+
+    </script>
+{% endblock %}

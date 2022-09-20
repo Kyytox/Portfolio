@@ -1,0 +1,25 @@
+<form id="searchJobs-form" action="{{ url_for('searchJobs') }}" method=GET>
+    <div class="form-header">
+        {{ form.metier }}
+        {{ form.location }}
+        {{ form.contrats }}
+
+        {{ form.submit }}
+    </div>
+    <div class="form-checkbox">
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Joob.dev</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">emplois-informatique</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Hello work</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Talent.com</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Welcome to Jungle</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Meteo Jobs</label>
+        <input type="checkbox" id="scales" name="checkbox" checked>
+        <label for="scales">Apec.fr</label>
+    </div>
+</form>

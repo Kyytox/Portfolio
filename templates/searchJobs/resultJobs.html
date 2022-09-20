@@ -1,0 +1,57 @@
+{% extends "./searchJobs/base.html" %}
+
+{% block content %} 
+
+    <div id="main">
+        {% include "./searchJobs/form.html" %}
+        <hr>
+
+        {% for i in jobs_list%}
+            <div class="main-box">
+                {% for x in i %}
+                    <a href={{x.link}} target="_blank" rel="noopener noreferrer">
+                        <div class="main-box-head">
+                            {% if x.date %}
+                                <p>{{x.date}}</p>
+                            {% endif %}
+                            <p>{{x.source}}</p>
+                        </div>
+
+                        <h2>{{x.title}}</h2>
+                        
+                        {% if x.company %}
+                            <h3><i class="fa-solid fa-building"></i> {{x.company}}</h3>
+                        {% endif %}
+
+                        <div class="main-box-loc-cont-sal">
+                            {% if x.location %}
+                                <h4><i class="fa-solid fa-location-dot"></i> {{x.location}}</h4>
+                            {% endif %}
+
+                            {% if x.contrat_job %}
+                                <h4><i class="fa-solid fa-file-contract"></i> {{x.contrat_job}}</h4>
+                            {% endif %}
+
+                            {% if x.salary %}
+                                <h4><i class="fa-solid fa-euro-sign"></i> {{x.salary}}</h4>
+                            {% endif %}
+                        </div>
+
+                        {% if x.descr %}
+                            <p class="main-box-descr">{{x.descr}}</p>
+                        {% endif %}
+
+                        {% if x.competences %}
+                            <ul>
+                                {% for y in x.competences %}
+                                    <li>{{y}}</li>
+                                {% endfor %}
+                            </ul>
+                            
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

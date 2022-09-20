@@ -1,0 +1,191 @@
+:root {
+    --color-text-title: rgb(196, 23, 23);
+    --color-text: rgb(197, 193, 193);
+    --color-text-hover: white;
+    --backColorBox: rgb(74 20 20);
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('../fonts/ubuntu.regular.ttf');
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(10, 10, 10);
+    font-family: myFirstFont;
+    letter-spacing: 1.2px;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    width: 70%;
+    border: 0;
+    border-top: 0.5px solid gray;
+}
+
+div#main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form .form-header input {
+    margin-right: 20px;
+    height: 20px;
+    width: 14%;
+}
+
+form .form-header input:last-child {
+    margin-left: 20px;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+form .form-header select {
+    height: 25px;
+}
+
+
+form .form-checkbox label {
+    margin-right: 25px;
+}
+
+input[type="checkbox" i] {
+    margin-top: 4px;
+}
+
+
+
+div#main .main-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    /* border-left: 0.3px solid blue; */
+}
+
+div#main .main-box:hover {
+    background-color: rgb(27, 27, 27);
+}
+
+div#main .main-box:hover h2 {
+    text-decoration: 1px underline;
+    text-underline-position: under;
+}
+
+div#main .main-box a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+div#main .main-box p,
+div#main .main-box h2,
+div#main .main-box h3,
+div#main .main-box h4 {
+    margin: 5px;
+}
+
+div#main .main-box h4,
+div#main .main-box h3 {
+    font-weight: 100;
+}
+
+div#main .main-box h2 {
+    margin-bottom: 17px;
+}
+
+
+div#main .main-box h3 i::before {
+    font-size: 15px;
+}
+
+
+
+div#main .main-box .main-box-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+
+div#main .main-box p:nth-child(1) {
+    text-align: start;
+    width: 50%;
+}
+
+div#main .main-box p:nth-child(2) {
+    text-align: end;
+    width: 50%;
+}
+
+
+div#main .main-box-loc-cont-sal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+div#main .main-box-loc-cont-sal h4 {
+    margin-right: 6%;
+    min-width: fit-content;
+}
+
+div#main .main-box .main-box-descr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px
+}
+
+div#main .main-box ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#main .main-box li {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin: 10px;
+    background: rgb(53, 53, 53);
+}

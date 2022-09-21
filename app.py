@@ -167,11 +167,7 @@ def resultJobs(metier , loc, contrat, check_list):
 
     # date
     today = datetime.today()
-    yesterday = today - timedelta(days = 1)
-    avant_hier = today - timedelta(days = 2)
     semaine1 = today - timedelta(days = 7)
-    mois_dernier = today - timedelta(days = 31)
-    mois2 = today - timedelta(days = 62)
 
     check=check_list[2:-2].split("', '")
 
@@ -238,45 +234,48 @@ def resultJobs(metier , loc, contrat, check_list):
         else:
             lib_contrat = "apprentissages-et-alternances"
 
-        url = f"https://www.emplois-informatique.fr/{lib_contrat}?metier={metier}&lieu={loc}"
-        r = requests.get(url, headers)
-        soup = BeautifulSoup(r.content, 'html.parser')
+        url = f"https://www.emplois-informatique.fr/{lib_contrat}?metier={metier}&lieu={loc}&p="
 
-        if "0 offre" not in str(soup.findAll('p')[1:2]):
+        for i in range(1,5):
+            url_search = url + str(i)
+            r = requests.get(url_search, headers)
+            soup = BeautifulSoup(r.content, 'html.parser')
 
-            divs = soup.find_all('div', class_='ads box-light')
+            if "0 offre" not in str(soup.findAll('p')[1:2]):
 
-            for item in divs:
-                link = item.find('h3').a['href']
-                title = item.find('h3').text
-                location = item.find('span', class_="refville").text
-                if item.find('strong', class_="refsalaire") != None:
-                    salary = item.find('strong', class_="refsalaire").text
+                divs = soup.find_all('div', class_='ads box-light')
 
-                date = item.find('i').text
-                descr = item.find('p', class_="gray").text
-                company = ""
-                contrat_job = ""
+                for item in divs:
+                    link = item.find('h3').a['href']
+                    title = item.find('h3').text
+                    location = item.find('span', class_="refville").text
+                    if item.find('strong', class_="refsalaire") != None:
+                        salary = item.find('strong', class_="refsalaire").text
+
+                    date = item.find('i').text
+                    descr = item.find('p', class_="gray").text
+                    company = ""
+                    contrat_job = ""
+                        
+                    li = item.find_all('li')
+                    for elem in li:
+                        competences.append(elem.find('a').text)
                     
-                li = item.find_all('li')
-                for elem in li:
-                    competences.append(elem.find('a').text)
-                
-                list_append_jobs = {
-                    'source': source,
-                    'link': link,
-                    'title': title,
-                    'company': company,
-                    'competences': competences,
-                    'descr': descr,  
-                    'contrat_job': contrat_job,  
-                    'location': location,  
-                    'date': date,
-                    'salary': salary
-                }
-                
-                jobs_list.append(list_append_jobs)
-                competences = []
+                    list_append_jobs = {
+                        'source': source,
+                        'link': link,
+                        'title': title,
+                        'company': company,
+                        'competences': competences,
+                        'descr': descr,  
+                        'contrat_job': contrat_job,  
+                        'location': location,  
+                        'date': date,
+                        'salary': salary
+                    }
+                    
+                    jobs_list.append(list_append_jobs)
+                    competences = []
 
 
     ############### Hello work ###################################### 
@@ -285,7 +284,8 @@ def resultJobs(metier , loc, contrat, check_list):
         url = f"https://www.hellowork.com/fr-fr/emploi/recherche.html?k={metier}&l={loc}&c={contrat}&p="
 
         for i in range(1,5):
-            r = requests.get(url + str(i) , headers)
+            url_search = url + str(i)
+            r = requests.get(url_search , headers)
             soup = BeautifulSoup(r.content, 'html.parser')
 
             li = soup.find_all('li', class_="!tw-mb-6")
@@ -295,14 +295,17 @@ def resultJobs(metier , loc, contrat, check_list):
                 title = item.find('h3', class_="!tw-mb-0").text
                 company = item.find('span', class_="tw-mr-2").text
                 contrat_job = item.find('span', class_="tw-w-max").text
-                location = item.find('span', class_="tw-text-ellipsis tw-whitespace-nowrap tw-block tw-overflow-hidden 2xs:tw-max-w-[20ch]").text
-                date = item.find('span', class_="md:tw-mt-0 tw-text-xs").text.strip()
-                salary = ""
+                location = item.find('span', class_="tw-flex tw-flex-wrap").text
+                date = item.find('span', class_="md:tw-mt-0 tw-text-xsOld").text.strip()
+                if item.find('span', class_="tw-text-tertiarysalary"):
+                    salary = item.find('span', class_="tw-text-tertiarysalary").text
+                else:
+                    salary = ""
 
-                if date == "hier":
-                    date = yesterday.strftime('%d/%m/%Y')
-                elif "il y" in date:
-                    date = today.strftime('%d/%m/%Y')
+                # if date == "hier":
+                #     date = yesterday.strftime('%d/%m/%Y')
+                # elif "il y" in date:
+                #     date = today.strftime('%d/%m/%Y')
 
 
 
@@ -384,27 +387,18 @@ def resultJobs(metier , loc, contrat, check_list):
             link = "https://www.welcometothejungle.com" + x.find('a')['href']
             title = x.find('h3', class_="sc-7dlxn3-5 ineDNW").text
             company = x.find('h4', class_="sc-7dlxn3-6 jHFSmB").text
-            loca = str(x.find('span', class_="sc-1lvyirq-2 gTmGWh"))
+            location = x.find('span', class_="sc-1lvyirq-3 kqrath").text
 
-            if loca == 'None':
-                location = x.findAll('span', class_="sc-1lvyirq-2 gRznTA")[1].text
-            else:
-                pos1 = loca.find('>')
-                pos2 = loca.find('/')
-                location = loca[pos1+1:pos2-1]
+            print(location)
+            # if loca == 'None':
+            #     location = x.find('span', class_="sc-1lvyirq-2 gRznTA").text
+            # else:
+            #     pos1 = loca.find('>')
+            #     pos2 = loca.find('/')
+            #     location = loca[pos1+1:pos2-1]
 
             contrat_job = x.find('li', class_="sc-1lvyirq-0 hqtUBk").text
             date = x.find('time').text
-            if date == 'avant-hier':
-                date = avant_hier.strftime('%d/%m/%Y')
-            elif "jours" in date:
-                jour_date = date[date.find('a')+2:date.find('j')-1]
-                date = today - timedelta(days = int(jour_date))
-                date = date.strftime('%d/%m/%Y')
-            elif "dernier" in date:
-                date = mois_dernier.strftime('%d/%m/%Y')
-            elif "mois" in date:
-                date = mois2.strftime('%d/%m/%Y')
 
             salary = ""
             competences = ""
@@ -545,6 +539,32 @@ def resultJobs(metier , loc, contrat, check_list):
 
             jobs_list.append(list_append_jobs)
         wd3.quit()
+
+
+    for x in range(len(jobs_list)):
+        date = jobs_list[x]['date']
+        if 'avant-hier' in date:
+            date = today - timedelta(days = 2)
+            date = date.strftime('%d/%m/%Y')
+        elif 'hier' in date:
+            date = today - timedelta(days = 1)
+            date = date.strftime('%d/%m/%Y')
+        elif 'minute' in date or 'heure' in date or 'heures' in date:
+            date = today.strftime('%d/%m/%Y')
+        elif 'jours' in date:
+            jour_date = date[date.find('a')+2:date.find('j')-1] 
+            date = today - timedelta(days = int(jour_date))
+            date = date.strftime('%d/%m/%Y')
+        elif 'mois' in date:
+            if 'dernier' in date:
+                date = today - timedelta(days = 30)
+                date = date.strftime('%d/%m/%Y')
+            else:
+                mois_date = date[date.find('a')+2:date.find('m')-1]  
+                date = today - timedelta(days = int(mois_date)*30)
+                date = date.strftime('%d/%m/%Y')
+        
+        jobs_list[x]['date'] = date
 
     jobs_list.sort(key = lambda x: datetime.strptime(x['date'], "%d/%m/%Y"), reverse=True)
 

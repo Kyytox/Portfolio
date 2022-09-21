@@ -1,4 +1,4 @@
-<form id="searchJobs-form" action="{{ url_for('searchJobs') }}" method=GET>
+<form id="searchJobs-form" action="{{ url_for('searchJobs') }}" method=GET onClick(test)>
     <div class="form-header">
         {{ form.metier }}
         {{ form.location }}
@@ -6,20 +6,19 @@
 
         {{ form.submit }}
     </div>
+    <br>
     <div class="form-checkbox">
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox0" {{checkBox_list[0]}}>
         <label for="scales">Joob.dev</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox1" {{checkBox_list[1]}}>
         <label for="scales">emplois-informatique</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox2" {{checkBox_list[2]}}>
         <label for="scales">Hello work</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox3" {{checkBox_list[3]}}>
         <label for="scales">Talent.com</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox4" {{checkBox_list[4]}}>
         <label for="scales">Welcome to Jungle</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
-        <label for="scales">Meteo Jobs</label>
-        <input type="checkbox" id="scales" name="checkbox" checked>
+        <input type="checkbox" id="scales" name="checkbox5" {{checkBox_list[5]}}>
         <label for="scales">Apec.fr</label>
     </div>
 </form>

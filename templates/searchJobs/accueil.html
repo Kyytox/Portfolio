@@ -4,5 +4,18 @@
 
     <div id="main">
         {% include "./searchJobs/form.html" %}
+        <br>
+        <br>
+        <br>
+        <span id="load" class="loader"></span>
     </div>
+
+
+    <script>
+        var form = document.getElementById("form-id");
+
+        document.getElementById("submit").addEventListener("click", function () {
+            document.getElementById("load").style.display = "inline-block";
+        });
+    </script>
 {% endblock %}

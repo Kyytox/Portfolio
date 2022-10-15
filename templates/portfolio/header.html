@@ -1,10 +1,16 @@
 <!--<img src="{{ url_for('static', filename='img/logo_.png') }}">-->
 <img src="../static/img/logo_.png">
 <div class="main-header-social">
-    <a href="https://github.com/Kyytox"><i class="fa-brands fa-github" alt="GitHub"></i></a>
-    <a href="#main-section-5"><i class="fa-solid fa-envelope" alt="E-mail"></i></a>
-    <a href=""><i class="fa-brands fa-linkedin" alt="Linkedin"></i></a>
-    <a href=""><i class="fa-sharp fa-solid fa-address-card" alt='CV'></i></a>
+    <a href="https://github.com/Kyytox" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github" alt="GitHub"></i>
+    </a>
+    <a href="#main-section-5" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope" alt="E-mail"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/thomas-caillault-133499250/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin" alt="Linkedin"></i>
+    </a>
+    <button id="cv" onclick="test()"><i class="fa-sharp fa-solid fa-address-card" alt='CV'></i></button>
     
     <form action="{{ url_for('portfolio') }}" method="GET">
         <input type="hidden" name="lang" value="FR">
@@ -15,4 +21,4 @@
         <button type="submit"><img src="../static/img/flag_EN.png"></button>
     </form>
 </div>
-<i class="fa-solid fa-bars" onclick="openNavbar()" ></i>
+<i class="fa-solid fa-bars" onclick="openNavbar()"></i>

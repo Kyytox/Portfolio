@@ -3,6 +3,10 @@
 {% block content %} 
 
     <div id="main">
+        <div id="pdf" class="pdf">
+            <iframe src="../static/pdf/CV.pdf#zoom=90" height="100%" width="96%" zoom="0.75"></iframe>
+            <span onclick="closePdf()">&#9932;</span> 
+        </div>
         <header class="main-header" data-aos="fade-down" data-aos-delay="3000">
             {% include "./portfolio/header.html" %}
         </header>
@@ -222,7 +226,7 @@
             camera = new THREE.PerspectiveCamera( 40, section.clientWidth / section.clientHeight, 1, 10000 );
             camera.position.z = 2000;
 
-            //console.log( section.clientWidth, section.clientHeight )
+            //
 
             scene = new THREE.Scene();
 
@@ -331,6 +335,7 @@
                 const target = targets[ i ];
 
                 // position final after transform
+                console.log( target.position.x, target.position.y )
                 new TWEEN.Tween( object.position )
                     .to( { x: target.position.x, y: target.position.y, z: target.position.z-100 }, Math.random() * duration + duration )
                     .easing( TWEEN.Easing.Exponential.InOut )

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="../static/img/logo_.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="https://kit.fontawesome.com/117361f2ed.js" crossorigin="anonymous"></script>
@@ -60,4 +61,19 @@
             }
         });
     });
+
+    function test() {
+        //document.getElementById("pdf").style.display = "block";
+        document.getElementById("pdf").classList.add('active');
+
+        //document.getElementById("MyElement").classList.remove('MyClass');
+    }
+
+    function closePdf() {
+        document.getElementById("pdf").classList.remove('active');
+    }
+
+
+    //style="visibility: hidden"
+
  </script>

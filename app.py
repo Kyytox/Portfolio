@@ -48,7 +48,6 @@ mail = Mail(app)
 ############  PORTFOLIO  ###########################################
 ####################################################################
 ####################################################################
-
 @app.route('/', methods=["GET", "POST"])
 def portfolio():
 
@@ -79,12 +78,21 @@ def portfolio():
 
 
 
+
+
+
+
+
+
+
+
+
+
 ####################################################################
 ####################################################################
 ############  TOOLS  ###############################################
 ####################################################################
 ####################################################################
-
 @app.route('/tools', methods=["GET", "POST"])
 def tools():
 
@@ -115,11 +123,10 @@ def tools():
 ############  SERACH JOBS  #########################################
 ####################################################################
 ####################################################################
-
 @app.route('/searchjobs', methods=["GET", "POST"])
 def searchJobs():
     form = SearchJobsForm()
-    checkBox_list = ["checked", "checked", "checked", "checked", "checked", "checked"]
+    checkBox_list = ["", "checked", "checked", "checked", "checked", "checked"]
     check_list = []
 
     if request.method == 'GET' and request.args.get('metier') != None:
@@ -570,6 +577,11 @@ def resultJobs(metier , loc, contrat, check_list):
 
     # wd2.quit()
     return render_template('searchJobs/resultJobs.html', form=form, jobs_list=jobs_list, checkBox_list=check)
+
+
+
+
+
 
 # main driver function
 if __name__ == '__main__':

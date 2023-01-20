@@ -1,6 +1,4 @@
 import React from "react";
-import { SiPython, SiJavascript, SiNodedotjs, SiReact, SiDjango, SiFlask } from "react-icons/si";
-
 import HeadLineCmd from "./HeadLineCmd";
 
 function Socials() {

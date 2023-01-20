@@ -2,7 +2,7 @@ import React from "react";
 
 import LetterByLetterText from "./LetterByLetterText";
 
-function HeadAsciiArt({ text }) {
+function HeadAsciiArt() {
     return (
         <div className="head-art-ascii">
             <pre>

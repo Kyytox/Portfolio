@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import Terminal from "./Terminal";
+import CallComposant from "./callComposant";
 
 // function who display Head / welcome / navbar when u comme on app
 function StartTerminal() {
-    const listInitTerminal = ["head", "welcome", "navbar"];
+    const listInitTerminal = ["head", "welcome", "menu"];
     const [listStartTerminal, setListStartTerminal] = useState([]);
     const [index, setIndex] = useState(0);
     const [count, setCount] = useState(0);
@@ -15,7 +15,8 @@ function StartTerminal() {
         if (count >= 3) return;
         const interval = setInterval(() => {
             console.log("add in listStartTerminal");
-            setListStartTerminal((listStartTerminal) => [...listStartTerminal, listInitTerminal[index]]);
+            setListStartTerminal([...listStartTerminal, CallComposant(listInitTerminal[index])]);
+            // setListStartTerminal((listStartTerminal) => [...listStartTerminal, listInitTerminal[index]]);
             setIndex((prevIndex) => prevIndex + 1);
             setCount(count + 1);
         }, 500);
@@ -24,7 +25,7 @@ function StartTerminal() {
 
     const divListTerminal = listStartTerminal.map((data, index) => (
         <div className="item-terminal" key={"item-terminal-" + index}>
-            <Terminal command={data} />
+            {data}
         </div>
     ));
 

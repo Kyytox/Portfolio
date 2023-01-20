@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import LineCmd from "./LineCmd";
-import HeadAsciiArt from "./HeadApp.jsx";
+import HeadAsciiArt from "./HeadAsciiArt.jsx";
 import NavBar from "./NavBar";
 import HeadLineCmd from "./HeadLineCmd";
 import "./App.css";

@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./App.css";
 
 import StartTerminal from "./startTerminal";
 import HeadLineCmd from "./HeadLineCmd";
-import NavBar from "./NavBar";
-import ErrCommand from "./ErrCommand";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Socials from "./Socials";
+import CallComposant from "./callComposant";
 
 function App() {
     const [input, setInput] = useState("");
@@ -18,52 +14,15 @@ function App() {
     setTimeout(() => {
         setIsVisible(true);
         console.log("test");
-    }, 200);
+    }, 2000);
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // update setOutput avec l'element récup via verifCompos
-        setOutput([...output, verifCompos(input)]);
+        // update setOutput avec l'element récup via CallComposant
+        setOutput([...output, CallComposant(input)]);
         setInput("");
     };
-
-    // renvoi le bon composant suivant l'input du l'user
-    function verifCompos(input) {
-        console.log("input", input);
-        switch (input) {
-            case "menu":
-                return (
-                    <>
-                        <NavBar />
-                    </>
-                );
-            case "skills":
-                return (
-                    <>
-                        <Skills />
-                    </>
-                );
-            case "projects":
-                return (
-                    <>
-                        <Projects />
-                    </>
-                );
-            case "socials":
-                return (
-                    <>
-                        <Socials />
-                    </>
-                );
-            default:
-                return (
-                    <>
-                        <ErrCommand error={input} />
-                    </>
-                );
-        }
-    }
 
     const divForm = (
         <>
@@ -78,7 +37,7 @@ function App() {
 
     return (
         <div className="app">
-            {/* <StartTerminal /> */}
+            <StartTerminal />
             <div>{output}</div>
 
             {/* wait end of StartTerminal and display input Terminal */}

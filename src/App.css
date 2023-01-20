@@ -5,6 +5,7 @@
 
 .app {
   width: 100%;
+  margin-bottom: 300px;
 }
 
 
@@ -25,6 +26,27 @@
 
 
 
+.element-terminal {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background: transparent;
+  border: 0;
+}
+
+input:focus {
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+input:focus-visible {
+  outline: none;
+  padding: 0;
+}
+
+
 
 
 
@@ -33,19 +55,103 @@
   flex-direction: column;
 }
 
-.navbar div {
+.navbar .item-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  cursor: pointer;
 }
 
-.navbar div :nth-child(1) {
-  width: 8%;
+.navbar .item-menu :nth-child(1) {
+  width: 12%;
   margin-right: 40px;
 }
 
-.navbar div :nth-child(2) {
+.navbar .item-menu :nth-child(2) {
   width: 100%;
   text-align: left;
+}
+
+.div-input-terminal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* skills */
+
+.div-skills {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.item-skills p {
+  margin: 0;
+}
+
+
+
+/* projects */
+.div-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.item-project {
+  width: 28%;
+  margin-bottom: 20px;
+}
+
+.head-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-projects h3 {
+  margin: 0;
+}
+
+
+.head-projects span :nth-child(2) {
+  margin-left: 10px;
+
+}
+
+
+.descr-project {}
+
+.techno-project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.techno-project p {
+  margin: 0;
+  margin-right: 25px;
+  font-style: italic;
 }

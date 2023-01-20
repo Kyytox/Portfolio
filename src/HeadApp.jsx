@@ -15,6 +15,7 @@ function HeadAsciiArt({ text }) {
                     <LetterByLetterText text={`╚═╝  ╚═╝   ╚═╝      ╚═╝    ╚═════╝ ╚═╝  ╚═╝`} timeSpeed={50} />
                 </code>
             </pre>
+            <LetterByLetterText text="Welcome on my portfolio, he is interactive but u can use terminal command" timeSpeed={50} />
         </div>
     );
 }

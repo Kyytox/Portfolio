@@ -185,3 +185,28 @@ input:focus-visible {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+
+
+
+
+/* bitcoin */
+
+.div-bitcoin {
+  display: flex;
+  flex-direction: row;
+}
+
+.div-bitcoin div:nth-child(1) {
+  margin-right: 80px;
+}
+
+
+.item-btc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-btc span {
+  margin-bottom: 7px;
+}

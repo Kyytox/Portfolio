@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Socials from "./Socials";
 import HeadAsciiArt from "./HeadAsciiArt";
 import Welcome from "./Welcome";
+import AddrBTC from "./AddrBTC";
 
 // renvoi le bon composant suivant l'input du l'user
 function CallComposant(input) {
@@ -44,6 +45,12 @@ function CallComposant(input) {
             return (
                 <>
                     <Socials />
+                </>
+            );
+        case "bitcoin":
+            return (
+                <>
+                    <AddrBTC />
                 </>
             );
         default:

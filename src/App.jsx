@@ -37,7 +37,7 @@ function App() {
 
     return (
         <div className="app">
-            <StartTerminal />
+            {/* <StartTerminal /> */}
             <div>{output}</div>
 
             {/* wait end of StartTerminal and display input Terminal */}

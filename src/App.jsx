@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 import ErrCommand from "./ErrCommand";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Socials from "./Socials";
 
 function App() {
     const [input, setInput] = useState("");
@@ -47,6 +48,12 @@ function App() {
                 return (
                     <>
                         <Projects />
+                    </>
+                );
+            case "socials":
+                return (
+                    <>
+                        <Socials />
                     </>
                 );
             default:

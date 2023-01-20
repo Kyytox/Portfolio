@@ -155,3 +155,33 @@ input:focus-visible {
   margin-right: 25px;
   font-style: italic;
 }
+
+
+
+
+/* Socials */
+
+.item-socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-socials a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.item-socials:nth-child(3) {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+.item-socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}

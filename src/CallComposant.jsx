@@ -6,15 +6,21 @@ import Socials from "./Socials";
 import HeadAsciiArt from "./HeadAsciiArt";
 import Welcome from "./Welcome";
 import AddrBTC from "./AddrBTC";
+import LetterByLetterText from "./LetterByLetterText";
 
 // renvoi le bon composant suivant l'input du l'user
 function CallComposant(input) {
-    console.log("input", input);
     switch (input) {
         case "head":
             return (
                 <>
                     <HeadAsciiArt />
+                </>
+            );
+        case "headWelcome":
+            return (
+                <>
+                    <LetterByLetterText text="Welcome on my portfolio, he is interactive but u can use terminal command" timeSpeed={50} />
                 </>
             );
         case "welcome":

@@ -5,7 +5,7 @@ function ErrCommand({ error }) {
     return (
         <div className="element-terminal">
             <HeadLineCmd text={error} />
-            <p>command not exist</p>
+            <p className="err-msg">command not found</p>
         </div>
     );
 }

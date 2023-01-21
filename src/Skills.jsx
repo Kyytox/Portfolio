@@ -14,7 +14,7 @@ function Skills() {
     ];
 
     const listSkills = dataSkills.map((data) => (
-        <div className="item-skills" key={data.title} onClick={() => displayNav(data.title)}>
+        <div className="item-skills" key={data.title}>
             <p>{data.icon}</p>
             <p>{data.title}</p>
         </div>

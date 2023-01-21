@@ -7,9 +7,9 @@ function Welcome() {
     return (
         <div className="div-input-terminal">
             <HeadLineCmd text="" />
-            <span>
+            <p className="input-welcome">
                 <LetterByLetterText text="Welcome I'm Kytox, a developper" timeSpeed={50} />
-            </span>
+            </p>
         </div>
     );
 }

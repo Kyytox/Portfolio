@@ -28,18 +28,11 @@ function Projects() {
             techno: ["Python", "Flask", "Scrapping", "Login/Sign", "Player Audio"],
         },
         {
-            title: "Matplotlib - Graph Crypto",
-            site: "https://github.com/Kyytox/Matplotlib---Graph",
-            github: "https://github.com/Kyytox/Matplotlib---Graph",
-            descr: "Initiation a MatploLib, réalisation de graph en utilisant les données de l'API Glassnodes (data liées aux crypto/Bitcoin) ",
-            techno: ["Python", "Matplotlib", "Pandas", "API"],
-        },
-        {
             title: "IA - Sentiments Tweets",
             site: "https://github.com/Kyytox/app-web-sentiment-twitter-ia",
             github: "https://github.com/Kyytox/app-web-sentiment-twitter-ia",
             descr: "App Web permettant d'analyser, via des graphiques, les sentiments (négatif, positif, neutre) des tweets d'un utilisateur à l'aide d'une IA.",
-            techno: ["Python", "IA", "NLP", "Titter API v2", "React JS", "Flask", "PostgreSQL"],
+            techno: ["Python", "IA", "NLP", "Twitter API v2", "React JS", "Flask", "PostgreSQL"],
         },
         {
             title: "Codewars Users Stats",
@@ -47,6 +40,13 @@ function Projects() {
             github: "https://github.com/Kyytox/codewars-user-stats",
             descr: "Outil permettant d'avoir un petit peu plus de détails concernant son avancement sur Codewars",
             techno: ["React JS", "API"],
+        },
+        {
+            title: "Matplotlib - Graph Crypto",
+            site: "https://github.com/Kyytox/Matplotlib---Graph",
+            github: "https://github.com/Kyytox/Matplotlib---Graph",
+            descr: "Initiation a MatploLib, réalisation de graphiques en utilisant les données de l'API Glassnodes (data liées aux crypto/Bitcoin) ",
+            techno: ["Python", "Matplotlib", "Pandas", "API"],
         },
     ];
 

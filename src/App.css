@@ -147,6 +147,13 @@ input:focus-visible {
 }
 
 
+.item-project:nth-child(4),
+.item-project:nth-child(5),
+.item-project:nth-child(6) {
+  margin-top: 40px;
+}
+
+
 .head-projects span :nth-child(2) {
   margin-left: 10px;
 }
@@ -166,7 +173,7 @@ input:focus-visible {
 
 .techno-project p {
   margin: 0;
-  margin-right: 25px;
+  margin-right: 30px;
   font-style: italic;
 }
 

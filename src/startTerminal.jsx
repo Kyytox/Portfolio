@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import CallComposant from "./callComposant";
+import CallComposant from "./CallComponent";
 
 // function who display Head / welcome / navbar when u comme on app
 function StartTerminal() {

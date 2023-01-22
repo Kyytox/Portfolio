@@ -6,7 +6,7 @@ function HeadLineCmd({ text }) {
             <p className="index-line-cmd">
                 <font color="red">visitor</font>
                 <font color="white">@</font>
-                <font color="green">kytox.dev</font>
+                <font color="orange">kytox.dev</font>
                 <font color="white">:~$</font>
             </p>
             {text && <p>{text}</p>}

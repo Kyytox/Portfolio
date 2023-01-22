@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import StartTerminal from "./StartTerminal";
 import HeadLineCmd from "./HeadLineCmd";
-import CallComposant from "./callComposant";
+import CallComponent from "./CallComponent";
 import { dataMenu } from "./GlobalVariable";
 import "./App.css";
 
@@ -37,7 +37,7 @@ function App() {
             setInput("");
         } else {
             // update setOutput avec l'element récup via CallComposant
-            setOutput([...output, CallComposant(input)]);
+            setOutput([...output, CallComponent(input)]);
             setInput("");
         }
     };
@@ -63,7 +63,7 @@ function App() {
                     setOutput([]);
                     setInput("");
                 } else {
-                    setOutput([...output, CallComposant(menuCompo)]);
+                    setOutput([...output, CallComponent(menuCompo)]);
                     setInput("");
                 }
             }

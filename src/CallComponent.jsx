@@ -9,7 +9,7 @@ import AddrBTC from "./AddrBTC";
 import LetterByLetterText from "./LetterByLetterText";
 
 // renvoi le bon composant suivant l'input du l'user
-function CallComposant(input) {
+function CallComponent(input) {
     const components = {
         head: HeadAsciiArt,
         headWelcome: LetterByLetterText,
@@ -31,4 +31,4 @@ function CallComposant(input) {
 
     return <Component {...props} />;
 }
-export default CallComposant;
+export default CallComponent;

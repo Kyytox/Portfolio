@@ -103,7 +103,7 @@ input:focus-visible {
 
 
 
-/* Navbar */
+/* Menu */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@ input:focus-visible {
 
 .navbar .item-menu :nth-child(1) {
   width: 12%;
-  margin-right: 40px;
+  color: #ff3030;
 }
 
 .navbar .item-menu :nth-child(2) {
@@ -176,6 +176,8 @@ input:focus-visible {
 
 .head-projects h3 {
   margin: 0;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .item-project:nth-child(4),
@@ -202,6 +204,7 @@ input:focus-visible {
   margin: 0;
   margin-right: 30px;
   font-style: italic;
+  font-size: 14px;
 }
 
 

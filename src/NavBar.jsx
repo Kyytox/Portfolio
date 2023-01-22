@@ -14,11 +14,17 @@ function NavBar() {
         { title: "bitcoin", desc: " - Bitcoin" },
         { title: "menu", desc: " - display Menu" },
         { title: "themes", desc: " - change themes" },
+        { title: "clear", desc: " - clear history" },
     ];
 
     const displayCompos = (event) => {
-        // update setOutput avec l'element récup via CallComposant
-        setOutput([...output, CallComposant(event)]);
+        if (event != "clear") {
+            // update setOutput avec l'element récup via CallComposant
+            // setOutput([...output, CallComposant(event)]);
+        } else {
+            console.log("testvhuqjvc");
+            setOutput([]);
+        }
     };
 
     // For caret position at the end
@@ -32,9 +38,10 @@ function NavBar() {
     });
 
     const listMenu = dataMenu.map((data) => (
-        <div className="item-menu" key={data.title} onClick={() => displayCompos(data.title)}>
-            <a>{data.title}</a>
-            <a>{data.desc}</a>
+        // <div className="item-menu" key={data.title} onClick={() => displayCompos(data.title)}>
+        <div className="item-menu" key={data.title}>
+            <p className={"menu-" + data.title}>{data.title}</p>
+            <p className={"menu-" + data.title}>{data.desc}</p>
         </div>
     ));
 

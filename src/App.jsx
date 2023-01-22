@@ -12,36 +12,61 @@ function App() {
     const inputRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
+    // display input Terminal x seconde after load page
     setTimeout(() => {
         setIsVisible(true);
     }, 10500);
 
+    // verif if press key is TAB
     const handleKeyPress = (event) => {
         if (event.key === "Tab") {
             console.log("test");
         }
     };
 
+    // submit form terminal
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        // update setOutput avec l'element récup via CallComposant
-        setOutput([...output, CallComposant(input)]);
-        setInput("");
+        if (input === "clear") {
+            console.log("clear");
+            setOutput([]);
+            setInput("");
+        } else {
+            // update setOutput avec l'element récup via CallComposant
+            setOutput([...output, CallComposant(input)]);
+            setInput("");
+        }
     };
 
-    function handleClick() {
-        inputRef.current.focus();
-        inputRef.current.scrollIntoView();
+    // evenement click for focus input terminal
+    function handleClick(event) {
+        console.log("event.target.className", event.target.className);
+
+        if (event.target.className) {
+            console.log("class exist");
+            console.log(event.target.className.search("menu-"));
+            if (event.target.className.search("menu-")) {
+                inputRef.current.focus();
+                inputRef.current.scrollIntoView();
+            } else {
+                const menuCompos = event.target.className.split("-")[1];
+                console.log("menuCompos", menuCompos);
+                // update setOutput avec l'element récup via CallComposant
+                setOutput([...output, CallComposant(menuCompos)]);
+                setInput("");
+            }
+        }
     }
 
     // For caret position at the end
     useEffect(() => {
         if (inputRef.current) {
-            handleClick();
+            console.log("hgvsdjhcvj");
+            handleClick(event);
         }
     });
 
+    // input Terminal
     const divForm = (
         <>
             <div className="div-input-terminal">

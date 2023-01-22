@@ -37,6 +37,9 @@
   margin-bottom: 15px;
 }
 
+
+/* form Input Terminal  */
+
 input {
   background: transparent;
   border: 0;
@@ -53,6 +56,8 @@ input:focus-visible {
 }
 
 
+
+/* Err command */
 .err-msg {
   margin: 0;
 }
@@ -60,7 +65,7 @@ input:focus-visible {
 
 
 
-
+/* Navbar */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -83,6 +88,16 @@ input:focus-visible {
   width: 100%;
   text-align: left;
 }
+
+.item-menu p {
+  margin: 0;
+
+}
+
+
+
+
+
 
 .div-input-terminal {
   display: flex;
@@ -146,13 +161,11 @@ input:focus-visible {
   margin: 0;
 }
 
-
 .item-project:nth-child(4),
 .item-project:nth-child(5),
 .item-project:nth-child(6) {
   margin-top: 40px;
 }
-
 
 .head-projects span :nth-child(2) {
   margin-left: 10px;
@@ -161,9 +174,6 @@ input:focus-visible {
 .head-projects span a {
   margin-top: 2px;
 }
-
-
-.descr-project {}
 
 .techno-project {
   display: flex;
@@ -201,7 +211,6 @@ input:focus-visible {
   cursor: default;
 }
 
-
 .item-socials a:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -220,7 +229,6 @@ input:focus-visible {
 .div-bitcoin div:nth-child(1) {
   margin-right: 80px;
 }
-
 
 .item-btc {
   display: flex;

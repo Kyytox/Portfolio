@@ -1,6 +1,10 @@
+import React, { createContext } from "react";
 import { SiPython, SiJavascript, SiNodedotjs, SiReact, SiDjango, SiFlask } from "react-icons/si";
 import LnLogo from "./assets/ln.jpg";
 import BtcLogo from "./assets/btc.jpg";
+
+// Création d'un context pour partager l'état style
+export const StyleContext = createContext();
 
 export const dataMenu = [
     { title: "skills", desc: " - display the technologies I have worked with recently" },
@@ -37,5 +41,29 @@ export const dataBitcoin = [
         title: "Lightning Network",
         addr: "lnbc1p3uky94pp5qhcaxhevj67733kwakad2r72rx24ltj6kt03enna9py7rltypmdsdqu2askcmr9wssx7e3q2dshgmmndp5scqzpgxqyz5vqsp5nswx3flsxtr00lwm6ns02wexcltdzz5zsa4mznstf7wkt5as0tzq9qyyssqq34q22p0gcy3arkg8mfpt293gs55azjrg3zv98fhgtfmynn96nspvgtr4e59t4epgzp9druralz9lmg7ev00qzkge5lhy90kz35t24qqs3cxv0",
         image: LnLogo,
+    },
+];
+
+export const dataThemes = [
+    {
+        title: "dark",
+        background: "black",
+        colorTextHead: ["red", "white", "orange", "white"],
+        colorText: "white",
+        colorMenu: "#f74242",
+    },
+    {
+        title: "light",
+        background: "white",
+        colorTextHead: ["red", "white", "orange", "white"],
+        colorText: "black",
+        colorMenu: "#f74242",
+    },
+    {
+        title: "ubuntu",
+        background: "rgb(45 9 34)",
+        colorTextHead: ["#80D932", "white", "#80D932", "white"],
+        colorText: "white",
+        colorMenu: "#80D932",
     },
 ];

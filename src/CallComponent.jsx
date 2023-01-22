@@ -7,6 +7,7 @@ import HeadAsciiArt from "./HeadAsciiArt";
 import Welcome from "./Welcome";
 import AddrBTC from "./AddrBTC";
 import LetterByLetterText from "./LetterByLetterText";
+import Themes from "./Themes";
 
 // renvoi le bon composant suivant l'input du l'user
 function CallComponent(input) {
@@ -19,6 +20,7 @@ function CallComponent(input) {
         projects: Projects,
         socials: Socials,
         bitcoin: AddrBTC,
+        themes: Themes,
     };
 
     const headWelcomeProps = {

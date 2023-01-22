@@ -3,6 +3,8 @@ import StartTerminal from "./StartTerminal";
 import HeadLineCmd from "./HeadLineCmd";
 import CallComponent from "./CallComponent";
 import { dataMenu } from "./GlobalVariable";
+import { StyleContext } from "./GlobalVariable";
+import { dataThemes } from "./GlobalVariable";
 import "./App.css";
 
 function App() {
@@ -10,11 +12,32 @@ function App() {
     const [output, setOutput] = useState([]);
     const inputRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [posHistory, setPosHistory] = useState(1);
+    const [style, setStyle] = useState({
+        background: dataThemes[0].background,
+        colorTextHead: dataThemes[0].colorTextHead,
+        colorText: dataThemes[0].colorText,
+        colorMenu: dataThemes[0].colorMenu,
+    });
 
     // display input Terminal x seconde after load page
     setTimeout(() => {
         setIsVisible(true);
     }, 10500);
+
+    const changeStyle = (newTheme) => {
+        console.log("newTheme", newTheme);
+        const getnewTheme = dataThemes.find(({ title }) => title === newTheme);
+        if (getnewTheme) {
+            setStyle({
+                background: getnewTheme.background,
+                colorTextHead: getnewTheme.colorTextHead,
+                colorText: getnewTheme.colorText,
+            });
+        } else {
+            setOutput([...output, CallComponent(newTheme)]);
+        }
+    };
 
     // verif if press key is TAB
     // assign input if event is find in dataMenu
@@ -35,6 +58,8 @@ function App() {
             console.log("clear");
             setOutput([]);
             setInput("");
+        } else if (!input.search("themes set")) {
+            changeStyle(input.split(" ")[2]);
         } else {
             // update setOutput avec l'element récup via CallComposant
             setOutput([...output, CallComponent(input)]);
@@ -53,12 +78,9 @@ function App() {
     function handleClick() {
         console.log("handleClick");
         if (event.target.className) {
-            if (event.target.className.search("menu-")) {
-                // "menu-" not exist in class
-                focusInput();
-            } else {
+            if (!event.target.className.search("menu-")) {
                 const menuCompo = event.target.className.split("-")[1];
-                // update setOutput avec l'element récup via CallComposant
+                // update setOutput with element retrieve by CallComposant
                 if (menuCompo === "clear") {
                     setOutput([]);
                     setInput("");
@@ -66,6 +88,11 @@ function App() {
                     setOutput([...output, CallComponent(menuCompo)]);
                     setInput("");
                 }
+            } else if (!event.target.className.search("theme-")) {
+                changeStyle(event.target.className.split("-")[1]);
+            } else {
+                // "menu-" not exist in class
+                focusInput();
             }
         } else {
             focusInput();
@@ -86,22 +113,24 @@ function App() {
             <div className="div-input-terminal">
                 <HeadLineCmd />
                 <form id="form-terminal" onSubmit={handleSubmit}>
-                    <input ref={inputRef} type="text" value={input} id="input-terminal" onChange={(event) => setInput(event.target.value)} onKeyDown={handleKeyPress} />
+                    <input ref={inputRef} type="text" value={input} id="input-terminal" onChange={(event) => setInput(event.target.value)} onKeyDown={handleKeyPress} autoComplete="off" />
                 </form>
             </div>
         </>
     );
 
     return (
-        <div className="app" onClick={handleClick}>
-            <div id="terminal">
-                <StartTerminal />
-                <div>{output}</div>
+        <StyleContext.Provider value={style}>
+            <div className="app" onClick={handleClick} style={{ backgroundColor: style.background, color: style.colorText }}>
+                <div id="terminal">
+                    <StartTerminal />
+                    <div>{output}</div>
 
-                {/* wait end of StartTerminal and display input Terminal */}
-                {isVisible && <div>{divForm}</div>}
+                    {/* wait end of StartTerminal and display input Terminal */}
+                    {isVisible && <div>{divForm}</div>}
+                </div>
             </div>
-        </div>
+        </StyleContext.Provider>
     );
 }
 export default App;

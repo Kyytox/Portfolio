@@ -1,10 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 
 import HeadLineCmd from "./HeadLineCmd";
 import { dataMenu } from "./GlobalVariable";
+import { StyleContext } from "./GlobalVariable";
 
 function NavBar() {
     const inputRef = useRef(null);
+    const style = useContext(StyleContext);
 
     // For caret position at the end
     useEffect(() => {
@@ -19,7 +21,9 @@ function NavBar() {
 
     const listMenu = dataMenu.map((data) => (
         <div className="item-menu" key={data.title}>
-            <p className={"menu-" + data.title}>{data.title}</p>
+            <p style={{ color: style.colorMenu }} className={"menu-" + data.title}>
+                {data.title}
+            </p>
             <p className={"menu-" + data.title}>{data.desc}</p>
         </div>
     ));

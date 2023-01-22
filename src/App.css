@@ -6,6 +6,8 @@
 .app {
   width: 100%;
   min-height: 100vh;
+  /* background-color: #000000;
+  color: rgba(255, 255, 255, 0.87); */
 }
 
 /* width */
@@ -16,21 +18,11 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(32, 32, 32);
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
 }
 
 /* Handle on hover */
@@ -118,7 +110,6 @@ input:focus-visible {
 
 .navbar .item-menu :nth-child(1) {
   width: 12%;
-  color: #ff3030;
 }
 
 .navbar .item-menu :nth-child(2) {

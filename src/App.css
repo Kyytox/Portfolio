@@ -8,9 +8,39 @@
   min-height: 100vh;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 32, 32);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(55, 55, 55);
+}
+
 #terminal {
   padding: 2rem;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
 
@@ -39,22 +69,30 @@
 
 
 /* form Input Terminal  */
+#form-terminal {
+  width: 40%;
+}
 
 input {
   background: transparent;
   border: 0;
+  width: 100%;
 }
 
 input:focus {
   font-size: 16px;
-  font-family: "IBM Plex Mono", monospace;
 }
 
 input:focus-visible {
   outline: none;
-  padding: 0;
 }
 
+.div-input-terminal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
 
 /* Err command */
@@ -91,25 +129,6 @@ input:focus-visible {
   margin: 0;
   cursor: pointer;
 }
-
-
-
-
-
-
-.div-input-terminal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-
-
-
-
-
-
 
 
 

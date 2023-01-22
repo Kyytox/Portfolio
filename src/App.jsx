@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import StartTerminal from "./startTerminal";
+import StartTerminal from "./StartTerminal";
 import HeadLineCmd from "./HeadLineCmd";
 import CallComposant from "./callComposant";
 import { dataMenu } from "./GlobalVariable";

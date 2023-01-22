@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-
-import "./App.css";
-
 import StartTerminal from "./startTerminal";
 import HeadLineCmd from "./HeadLineCmd";
 import CallComposant from "./callComposant";
+import { dataMenu } from "./GlobalVariable";
+import "./App.css";
 
 function App() {
     const [input, setInput] = useState("");
@@ -18,9 +17,14 @@ function App() {
     }, 10500);
 
     // verif if press key is TAB
+    // assign input if event is find in dataMenu
     const handleKeyPress = (event) => {
         if (event.key === "Tab") {
-            console.log("test");
+            event.preventDefault();
+            const getMenuCompo = dataMenu.find(({ title }) => title.startsWith(input));
+            if (getMenuCompo) {
+                setInput(getMenuCompo.title);
+            }
         }
     };
 
@@ -38,31 +42,41 @@ function App() {
         }
     };
 
-    // evenement click for focus input terminal
-    function handleClick(event) {
-        console.log("event.target.className", event.target.className);
+    function focusInput() {
+        console.log("focusInput");
+        inputRef.current.focus();
+        inputRef.current.scrollIntoView();
+    }
 
+    // evenement click for focus input terminal
+    // create composant if elment click class = menu-
+    function handleClick() {
+        console.log("handleClick");
         if (event.target.className) {
-            console.log("class exist");
-            console.log(event.target.className.search("menu-"));
             if (event.target.className.search("menu-")) {
-                inputRef.current.focus();
-                inputRef.current.scrollIntoView();
+                // "menu-" not exist in class
+                focusInput();
             } else {
-                const menuCompos = event.target.className.split("-")[1];
-                console.log("menuCompos", menuCompos);
+                const menuCompo = event.target.className.split("-")[1];
                 // update setOutput avec l'element récup via CallComposant
-                setOutput([...output, CallComposant(menuCompos)]);
-                setInput("");
+                if (menuCompo === "clear") {
+                    setOutput([]);
+                    setInput("");
+                } else {
+                    setOutput([...output, CallComposant(menuCompo)]);
+                    setInput("");
+                }
             }
+        } else {
+            focusInput();
         }
     }
 
     // For caret position at the end
     useEffect(() => {
         if (inputRef.current) {
-            console.log("hgvsdjhcvj");
-            handleClick(event);
+            console.log("useEffect");
+            focusInput();
         }
     });
 

@@ -1,13 +1,8 @@
 import React from "react";
 import HeadLineCmd from "./HeadLineCmd";
+import { dataSocials } from "./GlobalVariable";
 
 function Socials() {
-    const dataSocials = [
-        { title: "Twitter: Kytox_", link: "https://twitter.com/Kytox_" },
-        { title: "Github: Kyytox", link: "https://github.com/Kyytox" },
-        { title: "Nostr: npub14gtck3r2hvg4syjncjpfsk2un5sraap2ea6gtmy9ga20f4ch0r0ssrxg3e", link: "https://astral.ninja/" },
-    ];
-
     const listSocials = dataSocials.map((data) => (
         <div className="item-socials" key={data.title}>
             <a href={data.link} target="_blank" rel="noopener noreferrer">

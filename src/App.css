@@ -5,11 +5,12 @@
 
 .app {
   width: 100%;
+  min-height: 100vh;
 }
 
 #terminal {
   padding: 2rem;
-  /* padding-bottom: 100px; */
+  padding-bottom: 30px;
 }
 
 
@@ -137,7 +138,7 @@ input:focus-visible {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -148,7 +149,10 @@ input:focus-visible {
 
 .head-projects span :nth-child(2) {
   margin-left: 10px;
+}
 
+.head-projects span a {
+  margin-top: 2px;
 }
 
 

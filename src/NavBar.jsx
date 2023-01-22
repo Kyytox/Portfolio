@@ -1,12 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import HeadLineCmd from "./HeadLineCmd";
 import CallComposant from "./callComposant";
-import { useHandleClick } from "./shared-functions";
 
 function NavBar() {
     const inputRef = useRef(null);
-    const { handleClick, clicked } = useHandleClick(inputRef);
     const [output, setOutput] = useState([]);
 
     const dataMenu = [
@@ -21,8 +19,17 @@ function NavBar() {
     const displayCompos = (event) => {
         // update setOutput avec l'element récup via CallComposant
         setOutput([...output, CallComposant(event)]);
-        handleClick();
     };
+
+    // For caret position at the end
+    useEffect(() => {
+        const divTerminal = document.querySelectorAll("#input-terminal");
+        inputRef.current = divTerminal[divTerminal.length - 1];
+        if (inputRef.current) {
+            inputRef.current.focus();
+            inputRef.current.scrollIntoView();
+        }
+    });
 
     const listMenu = dataMenu.map((data) => (
         <div className="item-menu" key={data.title} onClick={() => displayCompos(data.title)}>

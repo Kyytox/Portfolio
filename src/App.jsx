@@ -5,18 +5,22 @@ import "./App.css";
 import StartTerminal from "./startTerminal";
 import HeadLineCmd from "./HeadLineCmd";
 import CallComposant from "./callComposant";
-import { useHandleClick } from "./shared-functions";
 
 function App() {
     const [input, setInput] = useState("");
     const [output, setOutput] = useState([]);
-    const [isVisible, setIsVisible] = useState(false);
     const inputRef = useRef(null);
-    const { handleClick, clicked } = useHandleClick(inputRef);
+    const [isVisible, setIsVisible] = useState(false);
 
     setTimeout(() => {
         setIsVisible(true);
     }, 10500);
+
+    const handleKeyPress = (event) => {
+        if (event.key === "Tab") {
+            console.log("test");
+        }
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -26,9 +30,13 @@ function App() {
         setInput("");
     };
 
+    function handleClick() {
+        inputRef.current.focus();
+        inputRef.current.scrollIntoView();
+    }
+
     // For caret position at the end
     useEffect(() => {
-        console.log("test");
         if (inputRef.current) {
             handleClick();
         }
@@ -38,8 +46,8 @@ function App() {
         <>
             <div className="div-input-terminal">
                 <HeadLineCmd />
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={input} ref={inputRef} onChange={(event) => setInput(event.target.value)} autofocus />
+                <form id="form-terminal" onSubmit={handleSubmit}>
+                    <input ref={inputRef} type="text" value={input} id="input-terminal" onChange={(event) => setInput(event.target.value)} onKeyDown={handleKeyPress} />
                 </form>
             </div>
         </>

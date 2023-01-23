@@ -70,8 +70,6 @@ function App() {
         if (input === "clear") {
             console.log("clear");
             setOutput([]);
-            setListHistory([]);
-            setPosHistory(0);
             setInput("");
         } else if (!input.search("themes set")) {
             changeStyle(input.split(" ")[2]);
@@ -100,8 +98,6 @@ function App() {
                 // update setOutput with element retrieve by CallComposant
                 if (menuCompo === "clear") {
                     setOutput([]);
-                    setListHistory([]);
-                    setPosHistory(0);
                     setInput("");
                 } else {
                     setOutput([...output, CallComponent(menuCompo)]);

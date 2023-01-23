@@ -15,7 +15,8 @@ function Themes() {
                 <HeadLineCmd text="themes" />
             </div>
             <div className="div-themes">{listThemes}</div>
-            <p>Usage: themes set "theme-name"</p>
+            <p className="p-themes">Usage: click on "theme-name"</p>
+            <p className="p-themes">Usage: themes set "theme-name"</p>
         </div>
     );
 }

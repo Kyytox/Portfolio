@@ -272,6 +272,15 @@ input:focus-visible {
 .div-themes {
   display: flex;
   flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.div-themes p {
+  margin: 0;
+}
+
+.p-themes {
+  margin: 0;
 }
 
 .item-themes {

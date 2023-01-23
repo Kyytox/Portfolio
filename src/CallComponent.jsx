@@ -24,7 +24,7 @@ function CallComponent(input) {
     };
 
     const headWelcomeProps = {
-        text: "Welcome on my portfolio, he is interactive but u can use terminal command",
+        text: "Welcome on my portfolio, he is interactive but u can use terminal commands",
         timeSpeed: 50,
     };
 

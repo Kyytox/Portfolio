@@ -33,11 +33,13 @@ export const dataSocials = [
 
 export const dataBitcoin = [
     {
+        // wasabi
         title: "Bitcoin",
         addr: "bc1qgpswu7r5w2pgchtffgcmhxewvz0vy0dup4jk4g",
         image: BtcLogo,
     },
     {
+        // wallet of satoshis
         title: "Lightning Network",
         addr: "lnbc1p3uky94pp5qhcaxhevj67733kwakad2r72rx24ltj6kt03enna9py7rltypmdsdqu2askcmr9wssx7e3q2dshgmmndp5scqzpgxqyz5vqsp5nswx3flsxtr00lwm6ns02wexcltdzz5zsa4mznstf7wkt5as0tzq9qyyssqq34q22p0gcy3arkg8mfpt293gs55azjrg3zv98fhgtfmynn96nspvgtr4e59t4epgzp9druralz9lmg7ev00qzkge5lhy90kz35t24qqs3cxv0",
         image: LnLogo,
@@ -55,7 +57,7 @@ export const dataThemes = [
     {
         title: "light",
         background: "white",
-        colorTextHead: ["red", "white", "orange", "white"],
+        colorTextHead: ["red", "black", "orange", "black"],
         colorText: "black",
         colorMenu: "#f74242",
     },
@@ -65,5 +67,12 @@ export const dataThemes = [
         colorTextHead: ["#80D932", "white", "#80D932", "white"],
         colorText: "white",
         colorMenu: "#80D932",
+    },
+    {
+        title: "retro",
+        background: "#1a1a1a",
+        colorTextHead: ["#714896", "white", "#714896", "white"],
+        colorText: "#00B6D6",
+        colorMenu: "#EA549F",
     },
 ];

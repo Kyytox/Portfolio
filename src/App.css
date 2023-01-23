@@ -6,8 +6,6 @@
 .app {
   width: 100%;
   min-height: 100vh;
-  /* background-color: #000000;
-  color: rgba(255, 255, 255, 0.87); */
 }
 
 /* width */
@@ -212,7 +210,6 @@ input:focus-visible {
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  color: white;
   width: fit-content;
   margin-bottom: 10px;
 }
@@ -225,6 +222,10 @@ input:focus-visible {
 .item-socials a:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+.item-socials button {
+  background-color: transparent;
 }
 
 
@@ -262,4 +263,18 @@ input:focus-visible {
 
 .item-btc span p {
   margin: 0;
+}
+
+
+
+/* Themes */
+
+.div-themes {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-themes {
+  margin-right: 40px;
+  cursor: pointer;
 }

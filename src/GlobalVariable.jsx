@@ -7,13 +7,20 @@ import BtcLogo from "./assets/btc.jpg";
 export const StyleContext = createContext();
 
 export const dataMenu = [
-    { title: "skills", desc: " - display the technologies I have worked with recently" },
-    { title: "projects", desc: " - projects that I've coded" },
-    { title: "socials", desc: " - check my social accounts" },
+    { title: "skills", desc: " - Afficher les outils avec lesquels j'ai travaillé" },
+    { title: "projects", desc: " - Projets que j'ai codé" },
+    { title: "socials", desc: " - Mes réseaux" },
     { title: "bitcoin", desc: " - Bitcoin" },
-    { title: "menu", desc: " - display Menu" },
-    { title: "themes", desc: " - change themes" },
-    { title: "clear", desc: " - clear history" },
+    { title: "menu", desc: " - Afficher le menu" },
+    { title: "themes", desc: " - Changer le thème" },
+    { title: "clear", desc: " - Clear" },
+    // { title: "skills", desc: " - display the technologies I have worked with recently" },
+    // { title: "projects", desc: " - projects that I've coded" },
+    // { title: "socials", desc: " - check my social accounts" },
+    // { title: "bitcoin", desc: " - Bitcoin" },
+    // { title: "menu", desc: " - display Menu" },
+    // { title: "themes", desc: " - change themes" },
+    // { title: "clear", desc: " - clear history" },
 ];
 
 export const dataSkills = [

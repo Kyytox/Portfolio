@@ -8,7 +8,8 @@ function Welcome() {
         <div className="div-input-terminal">
             <HeadLineCmd text="" />
             <p className="input-welcome">
-                <LetterByLetterText text="Welcome I'm Kytox, a developper" timeSpeed={50} />
+                {/* <LetterByLetterText text="Welcome I'm Kytox, a developper" timeSpeed={50} /> */}
+                <LetterByLetterText text="Bonjour, je suis Kytox, un developpeur" timeSpeed={50} />
             </p>
         </div>
     );

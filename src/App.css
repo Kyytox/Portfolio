@@ -28,34 +28,63 @@
   background: rgb(55, 55, 55);
 }
 
+
 #terminal {
-  padding: 2rem;
+  padding: 0.5rem;
   padding-bottom: 100px;
 }
 
-
-.head-art-ascii {
-  min-height: 195px;
+.head-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 
+
+.head-art-ascii {
+  min-height: 150px;
+}
+
+.item-terminal {
+  margin-bottom: 20px;
+}
+
+.element-terminal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+.div-input-terminal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 .line-cmd {
   display: flex;
+  margin-bottom: 5px;
 }
 
 
 .index-line-cmd {
   margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.line-cmd p, .input-welcome {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 
 
 
-.element-terminal {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
 
 
 /* form Input Terminal  */
@@ -77,12 +106,6 @@ input:focus-visible {
   outline: none;
 }
 
-.div-input-terminal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
 
 
 /* Err command */
@@ -107,7 +130,7 @@ input:focus-visible {
 }
 
 .navbar .item-menu :nth-child(1) {
-  width: 12%;
+  width: 20%;
 }
 
 .navbar .item-menu :nth-child(2) {
@@ -126,13 +149,16 @@ input:focus-visible {
 .div-skills {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .item-skills {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .item-skills p {
@@ -147,12 +173,12 @@ input:focus-visible {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
 }
 
 .item-project {
-  width: 28%;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .head-projects {
@@ -169,11 +195,11 @@ input:focus-visible {
   font-size: 20px;
 }
 
-.item-project:nth-child(4),
+/* .item-project:nth-child(4),
 .item-project:nth-child(5),
 .item-project:nth-child(6) {
   margin-top: 40px;
-}
+} */
 
 .head-projects span :nth-child(2) {
   margin-left: 10px;
@@ -212,6 +238,7 @@ input:focus-visible {
   text-decoration: none;
   width: fit-content;
   margin-bottom: 10px;
+  word-break: break-all;
 }
 
 .item-socials:nth-child(3) {
@@ -226,6 +253,7 @@ input:focus-visible {
 
 .item-socials button {
   background-color: transparent;
+  border: 0;
 }
 
 
@@ -235,11 +263,12 @@ input:focus-visible {
 
 .div-bitcoin {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .div-bitcoin div:nth-child(1) {
-  margin-right: 80px;
+  margin-bottom: 20px;
 }
 
 .item-btc {
@@ -286,4 +315,70 @@ input:focus-visible {
 .item-themes {
   margin-right: 40px;
   cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (min-width: 500px) {
+  .head-projects {
+    justify-content: flex-start;
+  }
+
+  .head-projects h3 {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+
+  .navbar .item-menu :nth-child(1) {
+    width: 15%;
+  }
+
+  .item-project {
+    width: 49%;
+  }
+
+  .div-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .div-bitcoin {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .div-bitcoin div:nth-child(1) {
+    margin-right: 50px;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+
+  .navbar .item-menu :nth-child(1) {
+    width: 12%;
+  }
+
+
+  .item-project {
+    width: 33%;
+  }
+
+  .div-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }

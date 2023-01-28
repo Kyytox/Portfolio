@@ -7,7 +7,7 @@ import BtcLogo from "./assets/btc.jpg";
 export const StyleContext = createContext();
 
 export const dataMenu = [
-    { title: "skills", desc: " - Afficher les outils avec lesquels j'ai travaillé" },
+    { title: "skills", desc: " - Afficher les outils que j'ai utilisés" },
     { title: "projects", desc: " - Projets que j'ai codé" },
     { title: "socials", desc: " - Mes réseaux" },
     { title: "bitcoin", desc: " - Bitcoin" },
